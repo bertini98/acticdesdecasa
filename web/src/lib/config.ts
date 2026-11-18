@@ -1,7 +1,12 @@
 // Configuración leída de las variables de entorno (.env.local en desarrollo).
 // La web arranca aunque falten claves: las partes que dependen de ellas avisan en pantalla.
 
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+// En Vercel, si no se indica, se usa el dominio de producción del proyecto (variable de sistema de Vercel).
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "http://localhost:3000");
 
 export const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
 export const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? "";
