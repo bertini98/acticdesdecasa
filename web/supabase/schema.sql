@@ -48,3 +48,11 @@ create table if not exists public.waitlist (
 );
 
 alter table public.waitlist enable row level security;
+
+-- Permisos de la API (por si el proyecto no los da automáticamente a las tablas nuevas).
+-- El acceso real a cada fila lo siguen limitando las políticas RLS de arriba.
+grant usage on schema public to anon, authenticated, service_role;
+grant select on public.subscriptions to authenticated;
+grant select, insert on public.attempts to authenticated;
+grant all on public.subscriptions, public.attempts, public.waitlist to service_role;
+grant usage, select on all sequences in schema public to authenticated, service_role;
