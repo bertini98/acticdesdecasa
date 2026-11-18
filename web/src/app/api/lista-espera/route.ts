@@ -14,8 +14,17 @@ export async function POST(request: NextRequest) {
     back.searchParams.set("error", "email");
     return NextResponse.redirect(back, 303);
   }
-  if (supabaseReady) {
-    await supabaseAdmin().from("waitlist").upsert({ email, source }, { onConflict: "email", ignoreDuplicates: true });
+  // Nunca decir "apuntado" si no se ha guardado: se perderían emails sin enterarnos.
+  try {
+    if (!supabaseReady) throw new Error("Supabase sin configurar");
+    const { error } = await supabaseAdmin()
+      .from("waitlist")
+      .upsert({ email, source }, { onConflict: "email", ignoreDuplicates: true });
+    if (error) throw new Error(error.message);
+  } catch (e) {
+    console.error("lista de espera:", e);
+    back.searchParams.set("error", "guardar");
+    return NextResponse.redirect(back, 303);
   }
   back.searchParams.set("ok", "1");
   return NextResponse.redirect(back, 303);

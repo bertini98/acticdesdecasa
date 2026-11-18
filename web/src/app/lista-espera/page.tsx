@@ -29,7 +29,13 @@ export default async function ListaEspera({
                 Estamos terminando los tests de los tres niveles. Déjanos tu email y te avisamos el primero, con un
                 descuento de lanzamiento.
               </p>
-              {error && <div className="notice error" style={{ marginBottom: 14 }}>Revisa el email.</div>}
+              {error && (
+                <div className="notice error" style={{ marginBottom: 14 }}>
+                  {error === "email"
+                    ? "Revisa el email."
+                    : "No hemos podido apuntarte ahora mismo. Inténtalo de nuevo en unos minutos."}
+                </div>
+              )}
               <form action="/api/lista-espera" method="post">
                 <input type="hidden" name="source" value="web" />
                 <label className="field">
