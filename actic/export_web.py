@@ -22,7 +22,11 @@ COMPETENCIA = {
     "sheet": "calculo", "formula": "calculo", "countif": "calculo", "average": "calculo",
     "si": "calculo", "div0": "calculo", "freeze": "calculo", "filter": "calculo", "pie": "calculo",
     "db": "datos", "query": "datos", "onemany": "datos",
-    "transition": "presentaciones",
+    "transition": "presentaciones", "master": "presentaciones",
+    "os": "equipo", "shift": "equipo", "backup": "civismo",
+    "spacing": "textos", "txt": "textos",
+    "date": "calculo", "vlookup": "calculo",
+    "report": "datos",
 }
 GRATIS = 4  # las primeras N de cada nivel salen en el test gratis (ya son públicas en los reels)
 

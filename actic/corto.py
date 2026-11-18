@@ -12,7 +12,7 @@ import sys
 import numpy as np
 from PIL import Image, ImageDraw
 
-from quiz import CARD_H, G, QUIZ, VOZ, art_card, cross, ctext, option_layer, text_layer, wrap
+from quiz import CARD_H, G, QUIZ, VOZ, art_card, cross, ctext, fit_font, option_layer, text_layer, wrap
 from sfx import SR, chime, click, lowpass, pop, riser, tick, whoosh, write_wav
 from teaser import (FPS, H, INK, LEVELS, OUT, W, WHITE, background, clamp, ease_back, ease_out,
                     font, lerp, level_bars, paste, pill_layer, text)
@@ -34,7 +34,10 @@ CAPTIONS = {
                "¡La D! Es la dirección de una página web, la que escribes en el navegador.",
                "¡La C! La RAM. Por eso, si no guardas, pierdes lo que estabas haciendo.",
                "¡La B! Detecta y elimina programas maliciosos, como virus o troyanos.",
-               "¡La D! Copiar duplica el archivo. Cortar lo mueve, y desaparece de su sitio original."],
+               "¡La D! Copiar duplica el archivo. Cortar lo mueve, y desaparece de su sitio original.",
+               "¡La C! Es el programa principal que gestiona el ordenador, como Windows, macOS o Linux.",
+               "¡La B! Mantén pulsada la tecla Mayús mientras escribes la letra. Bloq Mayús deja todo en mayúsculas.",
+               "¡La C! Es una copia de tus archivos en otro sitio, para recuperarlos si se estropea o pierdes el ordenador."],
     "medio": ["¡La B! Los dos puntos marcan un rango, de A1 a A5. Con punto y coma, solo sumarías dos celdas.",
               "¡La B! CCO: con copia oculta. Nadie verá las direcciones que pongas ahí.",
               "¡La D! El PDF mantiene el formato, las fuentes y las imágenes en cualquier dispositivo.",
@@ -46,7 +49,10 @@ CAPTIONS = {
               "¡La D! Se guardan en servidores de internet, y puedes abrirlos desde cualquier dispositivo.",
               "¡La B! Estás dividiendo entre cero, o entre una celda vacía. Las almohadillas (####), en cambio, significan que la columna es estrecha.",
               "¡La C! Deja fijas las filas o columnas que elijas, por ejemplo los títulos, mientras te desplazas.",
-              "¡La D! Al remitente, y a todos los destinatarios visibles. Piensa bien lo que escribes."],
+              "¡La D! Al remitente, y a todos los destinatarios visibles. Piensa bien lo que escribes.",
+              "¡La A! Es el espacio entre las líneas de un párrafo. Por ejemplo: sencillo, 1,5 o doble.",
+              "¡La C! La hoja lo convierte en una fecha: el 1 de febrero. Para ver la fracción, escribe 0 1/2.",
+              "¡La B! Lo que cambias en el patrón se aplica a todas las diapositivas a la vez: fuentes, colores o el logo."],
     "avanzado": ["¡La B! Es una referencia absoluta: al copiar la fórmula, sigue apuntando a la celda A1.",
                  "¡La C! Solo indica que la conexión va cifrada. Una web fraudulenta también puede tener candado.",
                  "¡La D! Es el campo que identifica cada registro sin repetirse, como el DNI de una persona.",
@@ -58,16 +64,28 @@ CAPTIONS = {
                  "¡La D! Es el efecto al pasar de una diapositiva a otra. Mover un objeto dentro de la diapositiva es una animación.",
                  "¡La B! Oculta las filas que no cumplen el criterio. Ordenar solo cambia el orden, no oculta nada.",
                  "¡La C! Quita información que casi no se nota, como en un .jpg o un .mp3. Un ZIP, en cambio, no pierde nada.",
-                 "¡La A! Por ejemplo, un cliente puede tener muchos pedidos, pero cada pedido es de un solo cliente."],
+                 "¡La A! Por ejemplo, un cliente puede tener muchos pedidos, pero cada pedido es de un solo cliente.",
+                 "¡La C! El informe presenta los datos para imprimirlos o compartirlos. Para introducirlos, usas un formulario.",
+                 "¡La B! Un archivo de texto plano solo guarda letras: se pierden las negritas, las tablas y las imágenes.",
+                 "¡La D! Busca un valor en la primera columna de una tabla, y te devuelve el dato de la misma fila que le indiques."],
 }
 
 # Estilo del gancho de cada vídeo (índice 0-based). Sin entrada: "classic" con gancho.mp3.
-# Los que tienen estilo propio usan su locución gancho_{nivel}_{n}.mp3.
+# "estilo" usa su locución propia gancho_{nivel}_{n}.mp3; ("estilo", "archivo") reutiliza
+# otra locución que ya dice lo mismo (no gasta créditos).
 HOOKS = {
     ("basico", 9): "timer", ("basico", 10): "pov", ("basico", 11): "fail",
     ("medio", 9): "trap_a", ("medio", 10): "challenge", ("medio", 11): "trap",
     ("avanzado", 9): "versus", ("avanzado", 10): "nota", ("avanzado", 11): "comment",
+    ("basico", 12): ("pov", "gancho_basico_11"), ("basico", 13): ("trap_a", "gancho_medio_10"),
+    ("basico", 14): "challenge",
+    ("medio", 12): ("timer", "gancho_basico_10"), ("medio", 13): ("fail", "gancho_basico_12"),
+    ("medio", 14): ("comment", "gancho_avanzado_12"),
+    ("avanzado", 12): "versus", ("avanzado", 13): ("trap", "gancho_medio_12"),
+    ("avanzado", 14): ("classic", "gancho"),
 }
+# Palabras del duelo ("versus"), arriba y abajo.
+VERSUS = {("avanzado", 9): ("¿FILTRAR?", "¿ORDENAR?"), ("avanzado", 12): ("¿FORMULARIO?", "¿INFORME?")}
 RED = (205, 90, 80)
 
 CAP_FONT = font("Bold", 50)
@@ -112,8 +130,11 @@ def build(key, i, hook=True):
     q = decode(VOZ / f"{key}_q{i + 1}.mp3")
     a = decode(VOZ / f"{key}_a{i + 1}.mp3")
     style = HOOKS.get((key, i), "classic")
-    own = VOZ / f"gancho_{key}_{i + 1}.mp3"
-    hk = decode(own if own.exists() else VOZ / "gancho.mp3") if hook else np.zeros(0)
+    audio = f"gancho_{key}_{i + 1}"
+    if isinstance(style, tuple):
+        style, audio = style
+    src = VOZ / f"{audio}.mp3"
+    hk = decode(src if src.exists() else VOZ / "gancho.mp3") if hook else np.zeros(0)
     dq, da, dh = len(q) / SR, len(a) / SR, len(hk) / SR
     off = 0.15 + dh + 0.35 if hook else 0.0
     vq = off + 0.25
@@ -122,6 +143,7 @@ def build(key, i, hook=True):
     va = rv + 0.35
     end = va + da + 1.8
     return dict(q=q, a=a, hk=hk, off=off, hit=0.15 + second_phrase(hk, last=style == "pov"), dh=dh, style=style,
+                versus=VERSUS.get((key, i), ("", "")),
                 vq=vq, cd=cd, rv=rv, va=va, end=end, caps=caption_chunks(CAPTIONS[key][i], va, da))
 
 
@@ -228,9 +250,11 @@ def hook_frame(lv, sc, t):
         remate(["TIENE TRAMPA"], 1250)
     elif style == "versus":
         kl = ease_out(t / 0.35)
-        text(c, "¿FILTRAR?", font("ExtraBold", 130), WHITE, W / 2 - (1 - kl) * 600, 660, kl)
+        top, bottom = sc["versus"]
+        vfont = fit_font(max(top, bottom, key=len), "ExtraBold", 130, 1000)
+        text(c, top, vfont, WHITE, W / 2 - (1 - kl) * 600, 660, kl)
         kr = ease_out((t - 0.25) / 0.35)
-        text(c, "¿ORDENAR?", font("ExtraBold", 130), INK, W / 2 + (1 - kr) * 600, 1340, kr)
+        text(c, bottom, vfont, INK, W / 2 + (1 - kr) * 600, 1340, kr)
         vs = Image.new("RGBA", (200, 200), (0, 0, 0, 0))
         dd = ImageDraw.Draw(vs)
         dd.ellipse((0, 0, 199, 199), fill=INK)

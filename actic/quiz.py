@@ -60,6 +60,17 @@ QUIZ = {
         dict(q="¿Qué diferencia hay entre copiar y cortar?",
              opts=["Ninguna", "Copiar borra el original", "Cortar solo sirve con texto",
                    "Cortar mueve, copiar duplica"], ok=3, art="cutcopy", tip="Cortar = mover"),
+        dict(q="¿Qué es un sistema operativo?",
+             opts=["Un programa para escribir", "Un tipo de antivirus",
+                   "El que gestiona el ordenador", "Una pieza del ordenador"], ok=2, art="os",
+             tip="Windows, macOS, Linux, Android…"),
+        dict(q="¿Qué tecla usas para escribir una sola letra en mayúscula?",
+             opts=["Bloq Mayús", "Mayús (Shift)", "Alt", "Tab"], ok=1, art="shift",
+             tip="Mayús + letra = una mayúscula"),
+        dict(q="¿Para qué sirve una copia de seguridad?",
+             opts=["Acelerar el ordenador", "Liberar espacio",
+                   "Recuperar tus archivos", "Protegerte de virus"], ok=2, art="backup",
+             tip="Guárdala en otro sitio: disco externo o nube"),
     ],
     "medio": [
         dict(q="En una hoja de cálculo, ¿qué fórmula suma de la celda A1 a la A5?",
@@ -99,6 +110,15 @@ QUIZ = {
         dict(q="Si pulsas «Responder a todos», ¿a quién le llega tu respuesta?",
              opts=["Solo al remitente", "A todos tus contactos", "A los de copia oculta",
                    "Al remitente y al resto"], ok=3, art="replyall", tip="Los de CCO no la reciben"),
+        dict(q="En un procesador de textos, ¿qué es el interlineado?",
+             opts=["El espacio entre líneas", "El margen de la página", "La separación entre palabras",
+                   "El número de columnas"], ok=0, art="spacing", tip="Sencillo, 1,5 o doble"),
+        dict(q="En una hoja de cálculo, si escribes 1/2 en una celda, ¿qué pasa?",
+             opts=["Aparece 0,5", "Aparece 1/2", "Se convierte en una fecha", "Da un error"], ok=2,
+             art="date", tip="Para la fracción: 0 1/2"),
+        dict(q="En una presentación, ¿qué es el patrón de diapositivas?",
+             opts=["Una diapositiva de ejemplo", "El diseño base de todas", "El orden de las diapositivas",
+                   "Un tipo de transición"], ok=1, art="master", tip="Cambias una vez, se aplica a todas"),
     ],
     "avanzado": [
         dict(q="En una hoja de cálculo, ¿para qué sirve el símbolo $ en esta referencia?",
@@ -143,6 +163,15 @@ QUIZ = {
              opts=["Uno de una tabla, varios de otra", "Dos tablas iguales",
                    "Una tabla de un registro", "Varias claves en una tabla"], ok=0, art="onemany",
              tip="1 cliente → N pedidos"),
+        dict(q="En una base de datos, ¿para qué sirve un informe?",
+             opts=["Introducir datos", "Filtrar registros", "Presentar e imprimir datos",
+                   "Relacionar tablas"], ok=2, art="report", tip="Formulario: meter datos · Informe: presentarlos"),
+        dict(q="¿Qué ocurre si guardas un documento de Word como texto plano (.txt)?",
+             opts=["Se conserva todo igual", "Pierde el formato y las imágenes", "Ocupa más espacio",
+                   "Solo se abre con Word"], ok=1, art="txt", tip=".txt = solo letras"),
+        dict(q="En una hoja de cálculo, ¿qué hace la función BUSCARV?",
+             opts=["Ordena una columna", "Cuenta valores repetidos", "Comprueba si hay errores",
+                   "Busca un dato en una tabla"], ok=3, art="vlookup", tip="=BUSCARV(valor; tabla; columna; FALSO)"),
     ],
 }
 
@@ -1092,6 +1121,182 @@ def art_onemany(d, lv, k):
         ctext(d, "?", G["art_l"], DIM, 445, 165)
 
 
+def art_os(d, lv, k):
+    acc = lv["accent"]
+    rr(d, (150, 15, 750, 300), 18, INK)
+    rr(d, (166, 31, 734, 262), 8, lerp(lv["bg"], acc, 0.25 * k))
+    rr(d, (166, 262, 734, 288), 6, lerp(INK, acc, k))
+    d.ellipse((176, 266, 194, 284), fill=WHITE)
+    for m in range(3):
+        rr(d, (200 + m * 34, 268, 224 + m * 34, 282), 4, lerp(WHITE, acc, 0.4))
+    for j in range(3):
+        rr(d, (190, 50 + j * 62, 230, 90 + j * 62), 8, lv["soft"])
+    rr(d, (300, 60, 560, 200), 12, WHITE, outline=lv["soft"], width=3)
+    rr(d, (300, 60, 560, 88), 12, lv["soft"])
+    rr(d, (420, 110, 700, 240), 12, WHITE, outline=lv["soft"], width=3)
+    rr(d, (420, 110, 700, 138), 12, lv["soft"])
+    if k > 0.5:
+        ctext(d, "Windows · macOS · Linux", G["art_s"], acc, 560, 190)
+
+
+def art_shift(d, lv, k):
+    acc = lv["accent"]
+    rr(d, (180, 20, 720, 110), 20, WHITE, outline=lv["soft"], width=4)
+    d.text((210, 32), "Hola, " + ("A" if k > 0.5 else "a") + "na", font=G["art_l"], fill=INK)
+    keycap(d, 220, 230, 260, 90, "Bloq Mayús", lv["bg"], INK, G["art_s"])
+    keycap(d, 500, 230, 230, 90, "⇧ Mayús", lerp(lv["bg"], acc, k), lerp(INK, WHITE, k), G["art_s"])
+    ctext(d, "+", G["art_l"], INK, 655, 225)
+    keycap(d, 750, 230, 100, 90, "A", lv["bg"], INK, G["art"])
+
+
+def art_backup(d, lv, k):
+    acc = lv["accent"]
+    red = (205, 90, 80)
+    rr(d, (70, 70, 330, 230), 14, INK)
+    rr(d, (84, 84, 316, 216), 8, lv["bg"])
+    rr(d, (40, 230, 360, 250), 8, INK)
+    for m in range(3):
+        doc_icon(d, 110 + m * 70, 110, 44, acc)
+    if k > 0.5:
+        cross(d, 200, 150, 60, red, 14)
+    rr(d, (600, 80, 820, 220), 24, lerp(lv["soft"], acc, k))
+    d.ellipse((780, 190, 800, 210), fill=WHITE)
+    ctext(d, "Copia", G["art"], lerp(INK, WHITE, k), 710, 135)
+    col = lerp(DIM, acc, k)
+    y = 150
+    d.line([(370, y), (580, y)], fill=col, width=7)
+    if k > 0.5:
+        d.polygon([(370, y - 14), (350, y), (370, y + 14)], fill=col)
+        ctext(d, "recuperar", G["art_s"], acc, 475, y + 40)
+    else:
+        d.polygon([(580, y - 14), (600, y), (580, y + 14)], fill=col)
+
+
+def art_spacing(d, lv, k):
+    acc = lv["accent"]
+    for x0, gap in ((120, 26), (500, 52)):
+        d.rectangle((x0, 20, x0 + 280, 320), fill=WHITE, outline=lv["soft"], width=3)
+        for m in range(5 if gap < 40 else 4):
+            y = 50 + m * (12 + gap)
+            rr(d, (x0 + 30, y, x0 + 250 - (m % 2) * 40, y + 12), 5, INK)
+        if k > 0.5:
+            y1, y2 = 62, 50 + 12 + gap
+            d.line([(x0 + 262, y1 + 2), (x0 + 262, y2 - 2)], fill=acc, width=5)
+            d.polygon([(x0 + 254, y2 - 12), (x0 + 270, y2 - 12), (x0 + 262, y2)], fill=acc)
+    ctext(d, "sencillo" if k > 0.5 else "", G["art_s"], acc, 260, 300)
+    ctext(d, "doble" if k > 0.5 else "", G["art_s"], acc, 640, 300)
+
+
+def art_date(d, lv, k):
+    acc = lv["accent"]
+    rr(d, (60, 18, 840, 88), 18, WHITE, outline=lv["soft"], width=4)
+    rr(d, (60, 18, 140, 88), 18, lv["soft"])
+    d.rectangle((120, 20, 140, 86), fill=lv["soft"])
+    ctext(d, "fx", G["art"], INK, 100, 53)
+    d.text((165, 26), "1/2" if k < 0.5 else "01/02/2026", font=G["art"], fill=INK)
+    x0, y0 = 250, 130
+    for c, w in enumerate((80, 320)):
+        x = x0 + (0 if c == 0 else 80)
+        for r in range(2):
+            y = y0 + r * 70
+            head = r == 0 or c == 0
+            fill = lv["soft"] if head else lerp(WHITE, acc, k)
+            d.rectangle((x, y, x + w, y + 70), fill=fill, outline=lerp(lv["soft"], INK, 0.15), width=2)
+            s = ["", "A"][c] if r == 0 else ("1" if c == 0 else ("01-feb" if k > 0.5 else "1/2"))
+            ctext(d, s, G["art_l"] if (r and c) else G["art"], WHITE if (r and c and k > 0.5) else INK,
+                  x + w / 2, y + 35)
+    if k > 0.5:
+        ctext(d, "¡la convierte en fecha!", G["art_s"], acc, 450, 305)
+
+
+def art_master(d, lv, k):
+    acc = lv["accent"]
+
+    def slide(x0, y0, w, h, logo):
+        d.rectangle((x0, y0, x0 + w, y0 + h), fill=WHITE, outline=lv["soft"], width=3)
+        rr(d, (x0 + w * 0.08, y0 + h * 0.14, x0 + w * 0.6, y0 + h * 0.28), 4, INK)
+        for m in range(2):
+            rr(d, (x0 + w * 0.08, y0 + h * (0.45 + m * 0.18), x0 + w * 0.8, y0 + h * (0.53 + m * 0.18)), 3,
+               lv["soft"])
+        if logo:
+            d.ellipse((x0 + w * 0.8, y0 + h * 0.1, x0 + w * 0.93, y0 + h * 0.1 + w * 0.13), fill=acc)
+
+    slide(330, 10, 240, 135, True)
+    ctext(d, "Patrón", G["art_s"], acc if k > 0.5 else INK, 450, 160)
+    for j in range(3):
+        x = 110 + j * 240
+        slide(x, 205, 200, 112, k > 0.5)
+        if k > 0.5:
+            d.line([(450, 175), (x + 100, 203)], fill=acc, width=4)
+
+
+def art_report(d, lv, k):
+    acc = lv["accent"]
+    # formulario
+    rr(d, (60, 20, 400, 320), 18, lv["bg"])
+    for j, lab in enumerate(["Nombre", "Ciudad"]):
+        d.text((90, 40 + j * 80), lab, font=G["art_s"], fill=INK)
+        rr(d, (90, 75 + j * 80, 370, 108 + j * 80), 10, WHITE, outline=lv["soft"], width=3)
+    rr(d, (250, 250, 370, 295), 22, lv["soft"])
+    ctext(d, "Guardar", font("SemiBold", 24), INK, 310, 272)
+    # informe
+    d.rectangle((500, 10, 800, 330), fill=WHITE, outline=lerp(lv["soft"], acc, k), width=4)
+    rr(d, (530, 35, 700, 55), 6, INK)
+    for r in range(5):
+        y = 85 + r * 38
+        d.line([(530, y + 30), (770, y + 30)], fill=lv["soft"], width=2)
+        rr(d, (530, y + 8, 640, y + 20), 4, lv["soft"])
+        rr(d, (690, y + 8, 770, y + 20), 4, lv["soft"])
+    rr(d, (650, 285, 770, 305), 6, INK)
+    if k > 0.5:
+        ctext(d, "Formulario", G["art_s"], DIM, 230, 345 - 30)
+        rr(d, (560, 300, 740, 340), 18, acc)
+        ctext(d, "Informe", G["art_s"], WHITE, 650, 320)
+
+
+def art_txt(d, lv, k):
+    acc = lv["accent"]
+    # documento con formato
+    d.rectangle((90, 15, 360, 325), fill=WHITE, outline=lv["soft"], width=3)
+    ctext(d, "Título", font("ExtraBold", 40), acc, 225, 55)
+    rr(d, (115, 90, 335, 190), 8, lerp(lv["soft"], acc, 0.3))
+    d.polygon([(130, 180), (190, 120), (230, 160), (260, 135), (320, 180)], fill=WHITE)
+    for m in range(3):
+        rr(d, (115, 210 + m * 30, 335 - (m % 2) * 50, 222 + m * 30), 5, INK)
+    col = lerp(DIM, acc, k)
+    d.line([(390, 170), (500, 170)], fill=col, width=7)
+    d.polygon([(500, 156), (520, 170), (500, 184)], fill=col)
+    ctext(d, ".txt", G["art"], col, 455, 130)
+    d.rectangle((550, 15, 820, 325), fill=WHITE, outline=lv["soft"], width=3)
+    if k > 0.5:
+        for m in range(8):
+            rr(d, (575, 45 + m * 32, 795 - (m % 3) * 40, 55 + m * 32), 4, DIM)
+    else:
+        ctext(d, "?", G["art_l"], DIM, 685, 170)
+
+
+def art_vlookup(d, lv, k):
+    acc = lv["accent"]
+    rr(d, (30, 15, 870, 80), 18, WHITE, outline=lv["soft"], width=4)
+    d.text((55, 26), '=BUSCARV("Marc";A2:C4;3;FALSO)', font=font("Bold", 34), fill=INK)
+    x0, y0, rh = 170, 100, 50
+    cols = [("Nombre", 200), ("Ciudad", 220), ("Nota", 140)]
+    rows = [("Ana", "Girona", "7"), ("Marc", "Lleida", "8"), ("Laia", "Reus", "6")]
+    for r in range(4):
+        x = x0
+        for c, (head, w) in enumerate(cols):
+            y = y0 + r * rh
+            hit = r == 2 and k > 0.5
+            fill = lv["soft"] if r == 0 else (lerp(WHITE, acc, 0.25 if c < 2 else 1) if hit else WHITE)
+            d.rectangle((x, y, x + w, y + rh), fill=fill, outline=lerp(lv["soft"], INK, 0.15), width=2)
+            s = head if r == 0 else rows[r - 1][c]
+            col = WHITE if (hit and c == 2) else INK
+            ctext(d, s, G["art_s"], col, x + w / 2, y + rh / 2)
+            x += w
+    if k > 0.5:
+        ctext(d, "→ 8", G["art_l"], acc, 800, y0 + 2.5 * rh)
+
+
 ARTS = dict(keys=art_keys, browser=art_browser, files=art_files, sheet=art_sheet, mail=art_mail,
             pdf=art_pdf, formula=art_formula, lock=art_lock, db=art_db, cursor=art_cursor,
             trash=art_trash, password=art_password, merge=art_merge, countif=art_countif,
@@ -1100,7 +1305,8 @@ ARTS = dict(keys=art_keys, browser=art_browser, files=art_files, sheet=art_sheet
             cloud=art_cloud, si=art_si, freesw=art_freesw, transition=art_transition,
             ram=art_ram, antivirus=art_antivirus, cutcopy=art_cutcopy, div0=art_div0,
             freeze=art_freeze, replyall=art_replyall, filter=art_filter, lossy=art_lossy,
-            onemany=art_onemany)
+            onemany=art_onemany, os=art_os, shift=art_shift, backup=art_backup, spacing=art_spacing,
+            date=art_date, master=art_master, report=art_report, txt=art_txt, vlookup=art_vlookup)
 
 
 def art_card(lv, name, k):

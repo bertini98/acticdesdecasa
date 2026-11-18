@@ -180,6 +180,51 @@
     "gratis": false
   },
   {
+    "id": "basico-13",
+    "nivel": "basico",
+    "competencia": "equipo",
+    "pregunta": "¿Qué es un sistema operativo?",
+    "opciones": [
+      "Un programa para escribir",
+      "Un tipo de antivirus",
+      "El que gestiona el ordenador",
+      "Una pieza del ordenador"
+    ],
+    "correcta": 2,
+    "explicacion": "Es el programa principal que gestiona el ordenador, como Windows, macOS o Linux.",
+    "gratis": false
+  },
+  {
+    "id": "basico-14",
+    "nivel": "basico",
+    "competencia": "equipo",
+    "pregunta": "¿Qué tecla usas para escribir una sola letra en mayúscula?",
+    "opciones": [
+      "Bloq Mayús",
+      "Mayús (Shift)",
+      "Alt",
+      "Tab"
+    ],
+    "correcta": 1,
+    "explicacion": "Mantén pulsada la tecla Mayús mientras escribes la letra. Bloq Mayús deja todo en mayúsculas.",
+    "gratis": false
+  },
+  {
+    "id": "basico-15",
+    "nivel": "basico",
+    "competencia": "civismo",
+    "pregunta": "¿Para qué sirve una copia de seguridad?",
+    "opciones": [
+      "Acelerar el ordenador",
+      "Liberar espacio",
+      "Recuperar tus archivos",
+      "Protegerte de virus"
+    ],
+    "correcta": 2,
+    "explicacion": "Es una copia de tus archivos en otro sitio, para recuperarlos si se estropea o pierdes el ordenador.",
+    "gratis": false
+  },
+  {
     "id": "medio-1",
     "nivel": "medio",
     "competencia": "calculo",
@@ -360,6 +405,51 @@
     "gratis": false
   },
   {
+    "id": "medio-13",
+    "nivel": "medio",
+    "competencia": "textos",
+    "pregunta": "En un procesador de textos, ¿qué es el interlineado?",
+    "opciones": [
+      "El espacio entre líneas",
+      "El margen de la página",
+      "La separación entre palabras",
+      "El número de columnas"
+    ],
+    "correcta": 0,
+    "explicacion": "Es el espacio entre las líneas de un párrafo. Por ejemplo: sencillo, 1,5 o doble.",
+    "gratis": false
+  },
+  {
+    "id": "medio-14",
+    "nivel": "medio",
+    "competencia": "calculo",
+    "pregunta": "En una hoja de cálculo, si escribes 1/2 en una celda, ¿qué pasa?",
+    "opciones": [
+      "Aparece 0,5",
+      "Aparece 1/2",
+      "Se convierte en una fecha",
+      "Da un error"
+    ],
+    "correcta": 2,
+    "explicacion": "La hoja lo convierte en una fecha: el 1 de febrero. Para ver la fracción, escribe 0 1/2.",
+    "gratis": false
+  },
+  {
+    "id": "medio-15",
+    "nivel": "medio",
+    "competencia": "presentaciones",
+    "pregunta": "En una presentación, ¿qué es el patrón de diapositivas?",
+    "opciones": [
+      "Una diapositiva de ejemplo",
+      "El diseño base de todas",
+      "El orden de las diapositivas",
+      "Un tipo de transición"
+    ],
+    "correcta": 1,
+    "explicacion": "Lo que cambias en el patrón se aplica a todas las diapositivas a la vez: fuentes, colores o el logo.",
+    "gratis": false
+  },
+  {
     "id": "avanzado-1",
     "nivel": "avanzado",
     "competencia": "calculo",
@@ -537,6 +627,51 @@
     ],
     "correcta": 0,
     "explicacion": "Por ejemplo, un cliente puede tener muchos pedidos, pero cada pedido es de un solo cliente.",
+    "gratis": false
+  },
+  {
+    "id": "avanzado-13",
+    "nivel": "avanzado",
+    "competencia": "datos",
+    "pregunta": "En una base de datos, ¿para qué sirve un informe?",
+    "opciones": [
+      "Introducir datos",
+      "Filtrar registros",
+      "Presentar e imprimir datos",
+      "Relacionar tablas"
+    ],
+    "correcta": 2,
+    "explicacion": "El informe presenta los datos para imprimirlos o compartirlos. Para introducirlos, usas un formulario.",
+    "gratis": false
+  },
+  {
+    "id": "avanzado-14",
+    "nivel": "avanzado",
+    "competencia": "textos",
+    "pregunta": "¿Qué ocurre si guardas un documento de Word como texto plano (.txt)?",
+    "opciones": [
+      "Se conserva todo igual",
+      "Pierde el formato y las imágenes",
+      "Ocupa más espacio",
+      "Solo se abre con Word"
+    ],
+    "correcta": 1,
+    "explicacion": "Un archivo de texto plano solo guarda letras: se pierden las negritas, las tablas y las imágenes.",
+    "gratis": false
+  },
+  {
+    "id": "avanzado-15",
+    "nivel": "avanzado",
+    "competencia": "calculo",
+    "pregunta": "En una hoja de cálculo, ¿qué hace la función BUSCARV?",
+    "opciones": [
+      "Ordena una columna",
+      "Cuenta valores repetidos",
+      "Comprueba si hay errores",
+      "Busca un dato en una tabla"
+    ],
+    "correcta": 3,
+    "explicacion": "Busca un valor en la primera columna de una tabla, y te devuelve el dato de la misma fila que le indiques.",
     "gratis": false
   }
 ]
