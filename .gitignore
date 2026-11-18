@@ -1,0 +1,10 @@
+# vídeos, audios y renders (pesan mucho; se regeneran con los scripts)
+actic/salida/
+__pycache__/
+# web
+web/node_modules/
+web/.next/
+web/.env*
+!web/.env.example
+web/next-env.d.ts
+.DS_Store

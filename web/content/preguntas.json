@@ -1,0 +1,542 @@
+[
+  {
+    "id": "basico-1",
+    "nivel": "basico",
+    "competencia": "equipo",
+    "pregunta": "¿Qué atajo de teclado sirve para copiar?",
+    "opciones": [
+      "Ctrl + V",
+      "Ctrl + C",
+      "Ctrl + X",
+      "Ctrl + Z"
+    ],
+    "correcta": 1,
+    "explicacion": "Control + C copia. Y Control + V, pega.",
+    "gratis": true
+  },
+  {
+    "id": "basico-2",
+    "nivel": "basico",
+    "competencia": "navegacion",
+    "pregunta": "¿Qué programa usas para visitar páginas web?",
+    "opciones": [
+      "Un antivirus",
+      "Un procesador de textos",
+      "Un navegador",
+      "Una hoja de cálculo"
+    ],
+    "correcta": 2,
+    "explicacion": "El navegador, como Chrome, Firefox o Edge.",
+    "gratis": true
+  },
+  {
+    "id": "basico-3",
+    "nivel": "basico",
+    "competencia": "equipo",
+    "pregunta": "¿Cuál de estos archivos es una imagen?",
+    "opciones": [
+      "informe.docx",
+      "notas.txt",
+      "cancion.mp3",
+      "foto.jpg"
+    ],
+    "correcta": 3,
+    "explicacion": ".jpg es un formato de imagen. .mp3 es audio.",
+    "gratis": true
+  },
+  {
+    "id": "basico-4",
+    "nivel": "basico",
+    "competencia": "equipo",
+    "pregunta": "¿Qué tecla borra el carácter que está a la izquierda del cursor?",
+    "opciones": [
+      "Supr",
+      "Retroceso",
+      "Esc",
+      "Tab"
+    ],
+    "correcta": 1,
+    "explicacion": "Retroceso borra a la izquierda. Supr, a la derecha.",
+    "gratis": true
+  },
+  {
+    "id": "basico-5",
+    "nivel": "basico",
+    "competencia": "equipo",
+    "pregunta": "¿Dónde van los archivos que eliminas en Windows?",
+    "opciones": [
+      "Se borran para siempre",
+      "A la Papelera de reciclaje",
+      "A la carpeta Descargas",
+      "Al escritorio"
+    ],
+    "correcta": 1,
+    "explicacion": "A la Papelera de reciclaje. Desde ahí todavía puedes recuperarlos.",
+    "gratis": false
+  },
+  {
+    "id": "basico-6",
+    "nivel": "basico",
+    "competencia": "civismo",
+    "pregunta": "¿Cómo debe ser una contraseña segura?",
+    "opciones": [
+      "Corta y fácil de recordar",
+      "Tu fecha de nacimiento",
+      "Letras, números y símbolos",
+      "Igual en todas tus cuentas"
+    ],
+    "correcta": 2,
+    "explicacion": "Larga, con letras, números y símbolos. Y distinta en cada cuenta.",
+    "gratis": false
+  },
+  {
+    "id": "basico-7",
+    "nivel": "basico",
+    "competencia": "equipo",
+    "pregunta": "¿Qué hace la opción «Guardar como»?",
+    "opciones": [
+      "Guarda con el mismo nombre",
+      "Guarda con otro nombre",
+      "Imprime el documento",
+      "Cierra sin guardar"
+    ],
+    "correcta": 1,
+    "explicacion": "Guarda el archivo con otro nombre o en otra carpeta, sin tocar el original.",
+    "gratis": false
+  },
+  {
+    "id": "basico-8",
+    "nivel": "basico",
+    "competencia": "equipo",
+    "pregunta": "¿Cuál de estos es un periférico de entrada?",
+    "opciones": [
+      "Monitor",
+      "Impresora",
+      "Teclado",
+      "Altavoces"
+    ],
+    "correcta": 2,
+    "explicacion": "El teclado envía datos al ordenador. El monitor y la impresora son de salida.",
+    "gratis": false
+  },
+  {
+    "id": "basico-9",
+    "nivel": "basico",
+    "competencia": "navegacion",
+    "pregunta": "¿Qué es una URL?",
+    "opciones": [
+      "Un tipo de virus",
+      "Un programa de correo",
+      "Una red social",
+      "La dirección de una página web"
+    ],
+    "correcta": 3,
+    "explicacion": "Es la dirección de una página web, la que escribes en el navegador.",
+    "gratis": false
+  },
+  {
+    "id": "basico-10",
+    "nivel": "basico",
+    "competencia": "equipo",
+    "pregunta": "¿Qué memoria se borra al apagar el ordenador?",
+    "opciones": [
+      "Disco duro",
+      "Memoria USB",
+      "Memoria RAM",
+      "Disco SSD"
+    ],
+    "correcta": 2,
+    "explicacion": "La RAM. Por eso, si no guardas, pierdes lo que estabas haciendo.",
+    "gratis": false
+  },
+  {
+    "id": "basico-11",
+    "nivel": "basico",
+    "competencia": "civismo",
+    "pregunta": "¿Para qué sirve un antivirus?",
+    "opciones": [
+      "Acelera internet",
+      "Detecta y elimina malware",
+      "Hace copias de seguridad",
+      "Organiza tus archivos"
+    ],
+    "correcta": 1,
+    "explicacion": "Detecta y elimina programas maliciosos, como virus o troyanos.",
+    "gratis": false
+  },
+  {
+    "id": "basico-12",
+    "nivel": "basico",
+    "competencia": "equipo",
+    "pregunta": "¿Qué diferencia hay entre copiar y cortar?",
+    "opciones": [
+      "Ninguna",
+      "Copiar borra el original",
+      "Cortar solo sirve con texto",
+      "Cortar mueve, copiar duplica"
+    ],
+    "correcta": 3,
+    "explicacion": "Copiar duplica el archivo. Cortar lo mueve, y desaparece de su sitio original.",
+    "gratis": false
+  },
+  {
+    "id": "medio-1",
+    "nivel": "medio",
+    "competencia": "calculo",
+    "pregunta": "En una hoja de cálculo, ¿qué fórmula suma de la celda A1 a la A5?",
+    "opciones": [
+      "=SUMA(A1;A5)",
+      "=SUMA(A1:A5)",
+      "=A1+A5",
+      "=TOTAL(A1-A5)"
+    ],
+    "correcta": 1,
+    "explicacion": "Los dos puntos marcan un rango, de A1 a A5. Con punto y coma, solo sumarías dos celdas.",
+    "gratis": true
+  },
+  {
+    "id": "medio-2",
+    "nivel": "medio",
+    "competencia": "navegacion",
+    "pregunta": "Envías un correo a varias personas y no quieres que vean las direcciones de los demás. ¿Qué campo usas?",
+    "opciones": [
+      "Para",
+      "CCO",
+      "CC",
+      "Asunto"
+    ],
+    "correcta": 1,
+    "explicacion": "CCO: con copia oculta. Nadie verá las direcciones que pongas ahí.",
+    "gratis": true
+  },
+  {
+    "id": "medio-3",
+    "nivel": "medio",
+    "competencia": "textos",
+    "pregunta": "¿Qué formato usarías para que un documento se vea igual en cualquier ordenador?",
+    "opciones": [
+      ".txt",
+      ".csv",
+      ".mp4",
+      ".pdf"
+    ],
+    "correcta": 3,
+    "explicacion": "El PDF mantiene el formato, las fuentes y las imágenes en cualquier dispositivo.",
+    "gratis": true
+  },
+  {
+    "id": "medio-4",
+    "nivel": "medio",
+    "competencia": "textos",
+    "pregunta": "En un procesador de textos, ¿para qué sirve la combinación de correspondencia?",
+    "opciones": [
+      "Unir dos documentos en uno",
+      "Crear cartas personalizadas",
+      "Revisar la ortografía",
+      "Enviar un documento por correo"
+    ],
+    "correcta": 1,
+    "explicacion": "Escribes una carta modelo, y se rellena sola con los datos de cada persona.",
+    "gratis": true
+  },
+  {
+    "id": "medio-5",
+    "nivel": "medio",
+    "competencia": "calculo",
+    "pregunta": "En una hoja de cálculo, ¿qué función cuenta las celdas que cumplen una condición?",
+    "opciones": [
+      "=SUMA",
+      "=PROMEDIO",
+      "=CONTAR.SI",
+      "=MAX"
+    ],
+    "correcta": 2,
+    "explicacion": "CONTAR.SI. Por ejemplo, para saber cuántas celdas dicen «Sí».",
+    "gratis": false
+  },
+  {
+    "id": "medio-6",
+    "nivel": "medio",
+    "competencia": "civismo",
+    "pregunta": "¿Qué es el phishing?",
+    "opciones": [
+      "Un tipo de antivirus",
+      "Un engaño para robarte datos",
+      "Una red wifi pública",
+      "Una copia de seguridad"
+    ],
+    "correcta": 1,
+    "explicacion": "Te escriben haciéndose pasar por tu banco o por una empresa, para robarte tus datos.",
+    "gratis": false
+  },
+  {
+    "id": "medio-7",
+    "nivel": "medio",
+    "competencia": "textos",
+    "pregunta": "En un procesador de textos, ¿para qué sirve un salto de página?",
+    "opciones": [
+      "Borra la página actual",
+      "Sigue en la página siguiente",
+      "Numera las páginas",
+      "Cambia la orientación"
+    ],
+    "correcta": 1,
+    "explicacion": "Hace que el texto siga en la página siguiente, aunque la actual no esté llena.",
+    "gratis": false
+  },
+  {
+    "id": "medio-8",
+    "nivel": "medio",
+    "competencia": "calculo",
+    "pregunta": "En una hoja de cálculo, ¿qué resultado da =PROMEDIO(4;6;8)?",
+    "opciones": [
+      "18",
+      "8",
+      "6",
+      "4"
+    ],
+    "correcta": 2,
+    "explicacion": "Da 6: suma 18 y lo divide entre los 3 valores.",
+    "gratis": false
+  },
+  {
+    "id": "medio-9",
+    "nivel": "medio",
+    "competencia": "navegacion",
+    "pregunta": "¿Qué significa guardar tus archivos en la nube?",
+    "opciones": [
+      "En una memoria USB",
+      "En la memoria RAM",
+      "En un archivo ZIP",
+      "En servidores de internet"
+    ],
+    "correcta": 3,
+    "explicacion": "Se guardan en servidores de internet, y puedes abrirlos desde cualquier dispositivo.",
+    "gratis": false
+  },
+  {
+    "id": "medio-10",
+    "nivel": "medio",
+    "competencia": "calculo",
+    "pregunta": "En una hoja de cálculo, ¿qué significa el error #¡DIV/0!?",
+    "opciones": [
+      "La columna es muy estrecha",
+      "Estás dividiendo entre cero",
+      "Falta un paréntesis",
+      "El archivo está dañado"
+    ],
+    "correcta": 1,
+    "explicacion": "Estás dividiendo entre cero, o entre una celda vacía. Las almohadillas (####), en cambio, significan que la columna es estrecha.",
+    "gratis": false
+  },
+  {
+    "id": "medio-11",
+    "nivel": "medio",
+    "competencia": "calculo",
+    "pregunta": "En una hoja de cálculo, ¿para qué sirve inmovilizar paneles?",
+    "opciones": [
+      "Oculta columnas",
+      "Bloquea con contraseña",
+      "Fija filas o columnas",
+      "Impide editar celdas"
+    ],
+    "correcta": 2,
+    "explicacion": "Deja fijas las filas o columnas que elijas, por ejemplo los títulos, mientras te desplazas.",
+    "gratis": false
+  },
+  {
+    "id": "medio-12",
+    "nivel": "medio",
+    "competencia": "navegacion",
+    "pregunta": "Si pulsas «Responder a todos», ¿a quién le llega tu respuesta?",
+    "opciones": [
+      "Solo al remitente",
+      "A todos tus contactos",
+      "A los de copia oculta",
+      "Al remitente y al resto"
+    ],
+    "correcta": 3,
+    "explicacion": "Al remitente, y a todos los destinatarios visibles. Piensa bien lo que escribes.",
+    "gratis": false
+  },
+  {
+    "id": "avanzado-1",
+    "nivel": "avanzado",
+    "competencia": "calculo",
+    "pregunta": "En una hoja de cálculo, ¿para qué sirve el símbolo $ en una referencia como =$A$1?",
+    "opciones": [
+      "Da formato de moneda",
+      "Fija la referencia al copiar",
+      "Redondea el resultado",
+      "Marca la celda como error"
+    ],
+    "correcta": 1,
+    "explicacion": "Es una referencia absoluta: al copiar la fórmula, sigue apuntando a la celda A1.",
+    "gratis": true
+  },
+  {
+    "id": "avanzado-2",
+    "nivel": "avanzado",
+    "competencia": "civismo",
+    "pregunta": "¿Qué te garantiza el candado de la barra del navegador?",
+    "opciones": [
+      "Que la web es de fiar",
+      "Que es una web oficial",
+      "Que la conexión va cifrada",
+      "Que no tiene virus"
+    ],
+    "correcta": 2,
+    "explicacion": "Solo indica que la conexión va cifrada. Una web fraudulenta también puede tener candado.",
+    "gratis": true
+  },
+  {
+    "id": "avanzado-3",
+    "nivel": "avanzado",
+    "competencia": "datos",
+    "pregunta": "En una base de datos, ¿qué es la clave primaria?",
+    "opciones": [
+      "La contraseña de la base de datos",
+      "El primer campo de la tabla",
+      "Un campo repetido en cada registro",
+      "El campo que identifica cada registro"
+    ],
+    "correcta": 3,
+    "explicacion": "Es el campo que identifica cada registro sin repetirse, como el DNI de una persona.",
+    "gratis": true
+  },
+  {
+    "id": "avanzado-4",
+    "nivel": "avanzado",
+    "competencia": "calculo",
+    "pregunta": "¿Qué gráfico usarías para mostrar qué parte del total representa cada dato?",
+    "opciones": [
+      "De líneas",
+      "Circular",
+      "De dispersión",
+      "De radar"
+    ],
+    "correcta": 1,
+    "explicacion": "El gráfico circular muestra cada dato como una porción del total.",
+    "gratis": true
+  },
+  {
+    "id": "avanzado-5",
+    "nivel": "avanzado",
+    "competencia": "datos",
+    "pregunta": "En una base de datos, ¿qué es una consulta?",
+    "opciones": [
+      "Una copia de seguridad",
+      "Un formulario de entrada",
+      "Una petición que filtra datos",
+      "Un informe para imprimir"
+    ],
+    "correcta": 2,
+    "explicacion": "Le pide a la base de datos solo los registros que cumplen unos criterios.",
+    "gratis": false
+  },
+  {
+    "id": "avanzado-6",
+    "nivel": "avanzado",
+    "competencia": "civismo",
+    "pregunta": "¿Qué es la verificación en dos pasos?",
+    "opciones": [
+      "Usar dos contraseñas",
+      "Entrar desde dos dispositivos",
+      "Cambiar la contraseña cada mes",
+      "Contraseña más un código extra"
+    ],
+    "correcta": 3,
+    "explicacion": "Además de la contraseña, te pide un código, por ejemplo en el móvil.",
+    "gratis": false
+  },
+  {
+    "id": "avanzado-7",
+    "nivel": "avanzado",
+    "competencia": "calculo",
+    "pregunta": "En una hoja de cálculo, ¿qué hace la función SI?",
+    "opciones": [
+      "Suma si hay datos",
+      "Elige según una condición",
+      "Cuenta las celdas vacías",
+      "Busca un valor en una tabla"
+    ],
+    "correcta": 1,
+    "explicacion": "Comprueba una condición, y devuelve un valor si se cumple, y otro si no.",
+    "gratis": false
+  },
+  {
+    "id": "avanzado-8",
+    "nivel": "avanzado",
+    "competencia": "civismo",
+    "pregunta": "¿Qué tipo de software te permite usar, estudiar y modificar un programa?",
+    "opciones": [
+      "Software privativo",
+      "Freeware",
+      "Software libre",
+      "Shareware"
+    ],
+    "correcta": 2,
+    "explicacion": "El software libre. Ojo: que un programa sea gratis no significa que sea libre.",
+    "gratis": false
+  },
+  {
+    "id": "avanzado-9",
+    "nivel": "avanzado",
+    "competencia": "presentaciones",
+    "pregunta": "En una presentación, ¿qué es una transición?",
+    "opciones": [
+      "Animar un objeto",
+      "Cambiar la plantilla",
+      "Insertar un vídeo",
+      "Paso entre diapositivas"
+    ],
+    "correcta": 3,
+    "explicacion": "Es el efecto al pasar de una diapositiva a otra. Mover un objeto dentro de la diapositiva es una animación.",
+    "gratis": false
+  },
+  {
+    "id": "avanzado-10",
+    "nivel": "avanzado",
+    "competencia": "calculo",
+    "pregunta": "En una hoja de cálculo, ¿qué hace un filtro?",
+    "opciones": [
+      "Ordena de la A a la Z",
+      "Oculta lo que no cumple",
+      "Borra las filas repetidas",
+      "Protege la hoja"
+    ],
+    "correcta": 1,
+    "explicacion": "Oculta las filas que no cumplen el criterio. Ordenar solo cambia el orden, no oculta nada.",
+    "gratis": false
+  },
+  {
+    "id": "avanzado-11",
+    "nivel": "avanzado",
+    "competencia": "multimedia",
+    "pregunta": "¿Qué es la compresión con pérdida?",
+    "opciones": [
+      "Comprime sin perder nada",
+      "Divide el archivo en partes",
+      "Quita datos para pesar menos",
+      "Cifra el archivo"
+    ],
+    "correcta": 2,
+    "explicacion": "Quita información que casi no se nota, como en un .jpg o un .mp3. Un ZIP, en cambio, no pierde nada.",
+    "gratis": false
+  },
+  {
+    "id": "avanzado-12",
+    "nivel": "avanzado",
+    "competencia": "datos",
+    "pregunta": "En una base de datos, ¿qué es una relación uno a varios?",
+    "opciones": [
+      "Uno de una tabla, varios de otra",
+      "Dos tablas iguales",
+      "Una tabla de un registro",
+      "Varias claves en una tabla"
+    ],
+    "correcta": 0,
+    "explicacion": "Por ejemplo, un cliente puede tener muchos pedidos, pero cada pedido es de un solo cliente.",
+    "gratis": false
+  }
+]
