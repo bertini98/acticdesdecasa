@@ -36,7 +36,7 @@ Proyecto de Albert (GitHub `bertini98`): cuenta de Instagram **@acticdesdecasa**
   2. Poner el enlace en la bio de Instagram.
   3. Dominio propio (opcional) y más preguntas para la web.
   4. Stripe (modo prueba): cuenta del usuario, `node scripts/stripe-setup.mjs` con su clave, webhook, IBAN de Wise para los pagos. Antes de vender: gestor (no es autónomo), IVA, condiciones legales, ~300 preguntas revisadas.
-- Planes previstos: mensual 4,99 €, trimestral 9,99 € (destacado), anual 19,99 € (`web/src/lib/plans.ts` y `PRECIOS` en `scripts/stripe-setup.mjs`).
+- Planes previstos: mensual 6,99 €, trimestral 9,99 € (destacado, «ahorras 52 %»), anual 19,99 € («ahorras 76 %») (`web/src/lib/plans.ts` y `PRECIOS` en `scripts/stripe-setup.mjs`).
 
 ## Entorno
 

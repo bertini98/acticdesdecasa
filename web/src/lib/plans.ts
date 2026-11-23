@@ -10,6 +10,8 @@ export type Plan = {
   periodo: string;
   detalle: string;
   destacado?: boolean;
+  /** Ahorro frente a pagar el mensual durante el mismo tiempo (comparación real, no un precio "antes"). */
+  ahorro?: string;
   priceEnv: string;
 };
 
@@ -17,7 +19,7 @@ export const PLANS: Plan[] = [
   {
     id: "mensual",
     nombre: "Mensual",
-    precio: "4,99 €",
+    precio: "6,99 €",
     periodo: "/mes",
     detalle: "Para quien tiene el examen ya",
     priceEnv: "STRIPE_PRICE_MENSUAL",
@@ -29,6 +31,7 @@ export const PLANS: Plan[] = [
     periodo: "/3 meses",
     detalle: "Sale a 3,33 €/mes · el tiempo justo para prepararlo",
     destacado: true,
+    ahorro: "Ahorras 10,98 € (-52 %) frente al mensual",
     priceEnv: "STRIPE_PRICE_TRIMESTRAL",
   },
   {
@@ -37,6 +40,7 @@ export const PLANS: Plan[] = [
     precio: "19,99 €",
     periodo: "/año",
     detalle: "Sale a 1,67 €/mes · para sacarte los tres niveles",
+    ahorro: "Ahorras 63,89 € (-76 %) frente al mensual",
     priceEnv: "STRIPE_PRICE_ANUAL",
   },
 ];

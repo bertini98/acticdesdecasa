@@ -6,7 +6,7 @@
 import Stripe from "stripe";
 
 const PRECIOS = [
-  { plan: "MENSUAL", nombre: "Mensual", importe: 499, interval: "month", count: 1 },
+  { plan: "MENSUAL", nombre: "Mensual", importe: 699, interval: "month", count: 1 },
   { plan: "TRIMESTRAL", nombre: "Trimestral", importe: 999, interval: "month", count: 3 },
   { plan: "ANUAL", nombre: "Anual", importe: 1999, interval: "year", count: 1 },
 ];

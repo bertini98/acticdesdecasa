@@ -22,6 +22,7 @@ export default function Plans() {
             {plan.precio} <small>{plan.periodo}</small>
           </div>
           <div className="muted">{plan.detalle}</div>
+          {plan.ahorro && <div className="ahorro">{plan.ahorro}</div>}
           <ul>
             {INCLUYE.map((i) => (
               <li key={i}>{i}</li>

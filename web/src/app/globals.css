@@ -368,6 +368,16 @@ p {
   color: var(--muted);
 }
 
+.plan .ahorro {
+  align-self: flex-start;
+  background: var(--basico-bg);
+  color: var(--basico);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+
 .plan ul {
   padding-left: 1.1em;
   margin: 8px 0 16px;
