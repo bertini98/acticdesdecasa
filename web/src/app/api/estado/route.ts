@@ -1,10 +1,11 @@
-import { NextResponse } from "next/server";
+import { NextResponse, connection } from "next/server";
 
 import { SITE_URL, salesOpen, stripeReady, supabaseReady } from "@/lib/config";
 import { supabaseAdmin } from "@/lib/supabase/server";
 
 // Diagnóstico de la configuración (sin mostrar ninguna clave): abre /api/estado en el navegador.
 export async function GET() {
+  await connection(); // comprobarlo en cada visita, no guardar la respuesta de la compilación
   const anon = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? "";
   const secret = process.env.SUPABASE_SERVICE_ROLE_KEY ?? "";
   const tipo = (k: string) =>
