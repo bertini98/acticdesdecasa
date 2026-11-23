@@ -1,5 +1,8 @@
-# vídeos, audios y renders (pesan mucho; se regeneran con los scripts)
-actic/salida/
+# renders (pesan mucho; se regeneran gratis con los scripts a partir de las locuciones)
+actic/salida/*
+# las locuciones costaron créditos de ElevenLabs y los logos son definitivos: se guardan
+!actic/salida/quiz_voz/
+!actic/salida/logo/
 __pycache__/
 # web
 web/node_modules/
