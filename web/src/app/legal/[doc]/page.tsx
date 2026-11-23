@@ -2,17 +2,22 @@ import { notFound } from "next/navigation";
 
 import { markdownToHtml } from "@/lib/markdown";
 
-// PLANTILLAS. Rellena los datos entre [corchetes] y revísalas con un gestor o abogado antes de vender.
-const TITULAR = "[NOMBRE Y APELLIDOS]";
-const NIF = "[NIF]";
-const DOMICILIO = "[DOMICILIO]";
-const EMAIL = "[EMAIL DE CONTACTO]";
+// Revisar con un gestor o abogado antes de vender. NIF y domicilio son obligatorios al empezar a cobrar.
+const TITULAR = "Xavier Estada";
+const NIF = ""; // pendiente
+const DOMICILIO = ""; // pendiente
+const EMAIL = "synetispotify@gmail.com";
+
+// "Xavier Estada, con NIF … y domicilio en …": solo los datos que ya tenemos
+const IDENTIDAD = [TITULAR, NIF && `con NIF ${NIF}`, DOMICILIO && `y domicilio en ${DOMICILIO}`]
+  .filter(Boolean)
+  .join(", ");
 
 const DOCS: Record<string, { titulo: string; md: string }> = {
   "aviso-legal": {
     titulo: "Aviso legal",
     md: `
-Este sitio web, acticdesdecasa, es titularidad de ${TITULAR}, con NIF ${NIF} y domicilio en ${DOMICILIO}. Contacto: ${EMAIL}.
+Este sitio web, acticdesdecasa, es titularidad de ${IDENTIDAD}. Contacto: ${EMAIL}.
 
 # Objeto
 
@@ -30,7 +35,7 @@ El material se revisa con cuidado, pero no se garantiza que coincida con las pre
   privacidad: {
     titulo: "Política de privacidad",
     md: `
-**Responsable:** ${TITULAR} (NIF ${NIF}). Contacto: ${EMAIL}.
+**Responsable:** ${IDENTIDAD}. Contacto: ${EMAIL}.
 
 # Qué datos tratamos y para qué
 

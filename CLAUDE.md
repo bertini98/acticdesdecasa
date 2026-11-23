@@ -29,11 +29,12 @@ Proyecto de Albert (GitHub `bertini98`): cuenta de Instagram **@acticdesdecasa**
 - Publicada en **https://acticdesdecasa.vercel.app** (Vercel Hobby, Root Directory `web`, despliegue automático con cada push a `main`). El usuario sabe que Hobby no permite uso comercial: antes de abrir ventas, pasar a Vercel Pro u otro hosting.
 - Supabase: proyecto `acticdesdecasa` (región West EU), URL `https://msunpwqhlhmyhsynaoie.supabase.co`. `web/supabase/schema.sql` ya ejecutado (tablas `subscriptions`, `attempts`, `waitlist`).
 - Variables en Vercel: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`. Ventas cerradas (`NEXT_PUBLIC_SALES_OPEN` sin poner = false): los botones llevan a la lista de espera.
-- **Pendiente ahora mismo:** la lista de espera no guardaba emails. Se añadió `/api/estado` (diagnóstico sin claves) y el formulario ya avisa si falla. Pedir al usuario captura de `https://acticdesdecasa.vercel.app/api/estado` y arreglar según lo que diga (lo más probable: clave mal pegada en Vercel o variables cambiadas sin redesplegar).
-- Pendiente después:
+- Lista de espera **funcionando** (`/api/estado` da claves publishable/secret y base de datos ok). En Vercel: las `NEXT_PUBLIC_*` son tipo Config y `SUPABASE_SERVICE_ROLE_KEY` tipo Secret; tras cambiar variables hay que hacer Redeploy. Los emails se ven en Supabase → Table Editor → `waitlist`.
+- Páginas legales con titular **Xavier Estada** y contacto **synetispotify@gmail.com**; NIF y domicilio pendientes (obligatorios antes de vender).
+- Pendiente:
   1. Supabase → Authentication → URL Configuration: Site URL `https://acticdesdecasa.vercel.app` y Redirect URL `https://acticdesdecasa.vercel.app/auth/callback`; probar el acceso por enlace mágico.
-  2. Rellenar las plantillas legales (`web/src/app/legal/[doc]/page.tsx`) con nombre y email de contacto del usuario.
-  3. Poner el enlace en la bio de Instagram.
+  2. Poner el enlace en la bio de Instagram.
+  3. Dominio propio (opcional) y más preguntas para la web.
   4. Stripe (modo prueba): cuenta del usuario, `node scripts/stripe-setup.mjs` con su clave, webhook, IBAN de Wise para los pagos. Antes de vender: gestor (no es autónomo), IVA, condiciones legales, ~300 preguntas revisadas.
 - Planes previstos: mensual 9,99 €, trimestral 19,99 € (destacado), anual 39,99 € (`web/src/lib/plans.ts` y `PRECIOS` en `scripts/stripe-setup.mjs`).
 
