@@ -17,7 +17,7 @@ export const PLANS: Plan[] = [
   {
     id: "mensual",
     nombre: "Mensual",
-    precio: "9,99 €",
+    precio: "4,99 €",
     periodo: "/mes",
     detalle: "Para quien tiene el examen ya",
     priceEnv: "STRIPE_PRICE_MENSUAL",
@@ -25,18 +25,18 @@ export const PLANS: Plan[] = [
   {
     id: "trimestral",
     nombre: "Trimestral",
-    precio: "19,99 €",
+    precio: "9,99 €",
     periodo: "/3 meses",
-    detalle: "Sale a 6,66 €/mes · el tiempo justo para prepararlo",
+    detalle: "Sale a 3,33 €/mes · el tiempo justo para prepararlo",
     destacado: true,
     priceEnv: "STRIPE_PRICE_TRIMESTRAL",
   },
   {
     id: "anual",
     nombre: "Anual",
-    precio: "39,99 €",
+    precio: "19,99 €",
     periodo: "/año",
-    detalle: "Sale a 3,33 €/mes · para sacarte los tres niveles",
+    detalle: "Sale a 1,67 €/mes · para sacarte los tres niveles",
     priceEnv: "STRIPE_PRICE_ANUAL",
   },
 ];
