@@ -1,7 +1,7 @@
 # Igual que stripe-setup.mjs, pero con urllib: es el que se usa desde Claude Code, donde el proxy del
 # entorno añade la clave de Stripe (guardada como credencial de api.stripe.com). Uso: python3 scripts/stripe_setup.py
-# Para modo real: quitar la comprobación de livemode y guardar la clave sk_live como credencial.
-import json, urllib.parse, urllib.request
+# Modo real: guardar la clave sk_live como credencial y ejecutar con --live.
+import json, sys, urllib.parse, urllib.request
 
 API = "https://api.stripe.com/v1/"
 HDR = {"Authorization": "Bearer sk_test_proxy-injected", "Content-Type": "application/x-www-form-urlencoded"}
@@ -15,7 +15,9 @@ def call(path, data=None):
     except urllib.error.HTTPError as e:
         raise SystemExit(f"Error en {path}: {e.read().decode()}")
 
-assert call("balance")["livemode"] is False, "¡No es modo prueba!"
+LIVE = "--live" in sys.argv
+modo = call("balance")["livemode"]
+assert modo is LIVE, f"La clave es de {'modo real' if modo else 'modo prueba'}; usa {'--live' if modo else 'sin --live'}"
 
 product = call("products", {
     "name": "acticdesdecasa · Acceso completo",
