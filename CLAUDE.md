@@ -13,6 +13,12 @@ Proyecto de Albert (GitHub `bertini98`): cuenta de Instagram **@acticdesdecasa**
   - `salida/quiz_voz/` — locuciones (**guardadas en git: costaron créditos**). Nombres: `{nivel}_q{n}.mp3`, `{nivel}_a{n}.mp3`, `gancho.mp3`, `gancho_{nivel}_{n}.mp3`. El resto de `salida/` se regenera.
 - `web/` — Next.js 16 (App Router, Cache Components, `proxy.ts` en vez de middleware) + Supabase + Stripe. Ver `web/README.md` y `web/AGENTS.md` (leer la doc de `node_modules/next/dist/docs/` antes de tocar APIs de Next).
 
+## Reels de promoción con personajes
+
+- `actic/personajes.py`: Casi (mascota casita con las barras de nivel) y Marta (estudiante), dibujados con PIL y animables (boca, parpadeo, expresiones, poses). `actic/promo.py`: guiones en `REELS` (líneas con quién habla, audio, texto del bocadillo y estado de los personajes/efectos); la boca sigue el volumen de cada voz. Uso: `python3 promo.py 1 5` (o `--preview` para fotogramas) → `salida/promo/promo_{n}.mp4`.
+- Voz de Marta: **Gala** (`Wi5NZQRxyOb3Jx4r0hrI`, castellano joven); Casi: Pablo. Audios `salida/quiz_voz/promo{n}_{m|c}{k}.mp3`.
+- Hechos: 1 «POV: el ACTIC es mañana» y 5 «El error que suspende a todos». Ideas pendientes: 2 academia vs desde casa, 3 POV estudias en el bus, 4 qué nivel necesitas.
+
 ## Voz (ElevenLabs)
 
 - Voz **Pablo**, `voice_id` `TZ3pgF19H1pelFonL8Zq`, modelo `eleven_multilingual_v2`, **una sola toma** (`generations_count: 1`) para ahorrar créditos.
