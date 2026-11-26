@@ -1,0 +1,1577 @@
+[
+  {
+    "id": "banco-basico-1",
+    "nivel": "basico",
+    "competencia": "equipo",
+    "pregunta": "¿Qué es el hardware de un ordenador?",
+    "opciones": [
+      "La conexión a internet",
+      "Las contraseñas",
+      "Sus programas",
+      "Sus componentes físicos"
+    ],
+    "correcta": 3,
+    "explicacion": "El hardware es lo que se puede tocar: pantalla, teclado, disco… Los programas son el software.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-2",
+    "nivel": "basico",
+    "competencia": "equipo",
+    "pregunta": "¿Qué atajo deshace la última acción?",
+    "opciones": [
+      "Ctrl + Z",
+      "Ctrl + D",
+      "Ctrl + X",
+      "Ctrl + Y"
+    ],
+    "correcta": 0,
+    "explicacion": "Ctrl + Z deshace y Ctrl + Y rehace lo que has deshecho.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-3",
+    "nivel": "basico",
+    "competencia": "equipo",
+    "pregunta": "¿Qué es una carpeta?",
+    "opciones": [
+      "Un contenedor para organizar archivos",
+      "Un tipo de virus",
+      "Un programa de dibujo",
+      "Una página web"
+    ],
+    "correcta": 0,
+    "explicacion": "Las carpetas sirven para agrupar y ordenar archivos, y pueden contener otras carpetas.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-4",
+    "nivel": "basico",
+    "competencia": "equipo",
+    "pregunta": "¿Cuál de estas unidades de almacenamiento es la mayor?",
+    "opciones": [
+      "1 kilobyte (KB)",
+      "1 megabyte (MB)",
+      "1 terabyte (TB)",
+      "1 gigabyte (GB)"
+    ],
+    "correcta": 2,
+    "explicacion": "De menor a mayor: KB, MB, GB y TB. Cada una es unas mil veces la anterior.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-5",
+    "nivel": "basico",
+    "competencia": "equipo",
+    "pregunta": "¿Para qué sirve el ratón?",
+    "opciones": [
+      "Para conectarse a internet",
+      "Para guardar archivos",
+      "Para imprimir documentos",
+      "Para señalar y seleccionar en la pantalla"
+    ],
+    "correcta": 3,
+    "explicacion": "El ratón es un periférico de entrada: mueve el puntero y permite hacer clic, seleccionar y arrastrar.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-6",
+    "nivel": "basico",
+    "competencia": "equipo",
+    "pregunta": "¿Qué hace la combinación Alt + Tab en Windows?",
+    "opciones": [
+      "Apagar el ordenador",
+      "Cerrar el programa",
+      "Cambiar entre las ventanas abiertas",
+      "Abrir el navegador"
+    ],
+    "correcta": 2,
+    "explicacion": "Alt + Tab muestra las ventanas abiertas y te deja saltar de una a otra.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-7",
+    "nivel": "basico",
+    "competencia": "equipo",
+    "pregunta": "¿Qué es un pendrive (memoria USB)?",
+    "opciones": [
+      "Una red wifi",
+      "Un periférico de salida",
+      "Un dispositivo de almacenamiento portátil",
+      "Un programa antivirus"
+    ],
+    "correcta": 2,
+    "explicacion": "Sirve para guardar y llevar archivos de un ordenador a otro.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-8",
+    "nivel": "basico",
+    "competencia": "equipo",
+    "pregunta": "¿Qué es el escritorio de Windows?",
+    "opciones": [
+      "La pantalla principal con iconos y barra de tareas",
+      "El disco duro",
+      "Una carpeta oculta del sistema",
+      "Un programa de texto"
+    ],
+    "correcta": 0,
+    "explicacion": "Es lo primero que ves al iniciar sesión: el fondo con iconos, la barra de tareas y el botón de inicio.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-9",
+    "nivel": "basico",
+    "competencia": "equipo",
+    "pregunta": "¿Qué significa «arrastrar y soltar»?",
+    "opciones": [
+      "Borrar un archivo",
+      "Mover algo manteniendo pulsado el botón del ratón",
+      "Copiar con el teclado",
+      "Cerrar una ventana"
+    ],
+    "correcta": 1,
+    "explicacion": "Haces clic, mantienes pulsado, mueves el elemento y sueltas el botón en el sitio de destino.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-10",
+    "nivel": "basico",
+    "competencia": "equipo",
+    "pregunta": "¿Qué tipo de periférico es una impresora?",
+    "opciones": [
+      "De red",
+      "De entrada",
+      "De salida",
+      "De almacenamiento"
+    ],
+    "correcta": 2,
+    "explicacion": "La impresora saca información del ordenador al papel, por eso es de salida.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-11",
+    "nivel": "basico",
+    "competencia": "civismo",
+    "pregunta": "¿Qué es el spam?",
+    "opciones": [
+      "Una red social",
+      "Correo no deseado, normalmente publicitario",
+      "Un virus que borra el disco",
+      "Un tipo de contraseña"
+    ],
+    "correcta": 1,
+    "explicacion": "El spam son mensajes masivos que no has pedido. A veces esconden engaños o virus.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-12",
+    "nivel": "basico",
+    "competencia": "civismo",
+    "pregunta": "Te llega un SMS de «tu banco» con un enlace para verificar tu cuenta. ¿Qué haces?",
+    "opciones": [
+      "Respondo con mis datos",
+      "Lo abro para comprobar si es verdad",
+      "No lo abro y contacto con el banco por sus canales oficiales",
+      "Lo reenvío a mis contactos"
+    ],
+    "correcta": 2,
+    "explicacion": "Es un intento típico de engaño (smishing). Los bancos no piden datos por enlaces en SMS.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-13",
+    "nivel": "basico",
+    "competencia": "civismo",
+    "pregunta": "¿Qué son las cookies de una web?",
+    "opciones": [
+      "Pequeños archivos que guardan datos de tu navegación",
+      "Copias de seguridad",
+      "Virus que roban contraseñas",
+      "Anuncios emergentes"
+    ],
+    "correcta": 0,
+    "explicacion": "Recuerdan cosas como tu sesión o tus preferencias. Las webs deben pedirte permiso para las que no son imprescindibles.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-14",
+    "nivel": "basico",
+    "competencia": "civismo",
+    "pregunta": "¿Para qué sirven las actualizaciones del sistema y los programas?",
+    "opciones": [
+      "Para que el ordenador vaya más lento",
+      "Para borrar tus archivos",
+      "Para instalar virus",
+      "Para corregir errores y fallos de seguridad"
+    ],
+    "correcta": 3,
+    "explicacion": "Mantenerlo todo actualizado es una de las mejores protecciones contra ataques.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-15",
+    "nivel": "basico",
+    "competencia": "civismo",
+    "pregunta": "¿Por qué es arriesgado usar una wifi pública sin contraseña?",
+    "opciones": [
+      "Borra tus fotos",
+      "Es ilegal",
+      "Gasta más batería",
+      "Otras personas podrían ver lo que envías"
+    ],
+    "correcta": 3,
+    "explicacion": "En redes abiertas evita hacer trámites delicados, como entrar en el banco, o usa una VPN.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-16",
+    "nivel": "basico",
+    "competencia": "civismo",
+    "pregunta": "¿Qué es tu huella digital en internet?",
+    "opciones": [
+      "El rastro que dejas con lo que publicas y haces en la red",
+      "Tu huella dactilar escaneada",
+      "Un tipo de virus",
+      "Tu contraseña del correo"
+    ],
+    "correcta": 0,
+    "explicacion": "Todo lo que publicas, comentas o compartes puede quedar guardado mucho tiempo.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-17",
+    "nivel": "basico",
+    "competencia": "civismo",
+    "pregunta": "Según la ley de protección de datos (RGPD), ¿qué puedes pedir sobre tus datos personales?",
+    "opciones": [
+      "Que se corrijan o se borren",
+      "Nada: son de la empresa",
+      "Que los vendan por ti",
+      "Solo verlos en papel"
+    ],
+    "correcta": 0,
+    "explicacion": "Tienes derecho a acceder a tus datos, rectificarlos, suprimirlos y oponerte a su uso, entre otros.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-18",
+    "nivel": "basico",
+    "competencia": "civismo",
+    "pregunta": "Antes de publicar en redes una foto donde sale otra persona, debes…",
+    "opciones": [
+      "Ponerle un filtro",
+      "Etiquetar a más gente",
+      "Publicarla de noche",
+      "Pedirle permiso"
+    ],
+    "correcta": 3,
+    "explicacion": "La imagen de cada persona es un dato personal: necesitas su consentimiento.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-19",
+    "nivel": "basico",
+    "competencia": "civismo",
+    "pregunta": "¿Para qué sirve el bloqueo de pantalla con PIN o huella en el móvil?",
+    "opciones": [
+      "Para hacer copias de seguridad",
+      "Para eliminar virus",
+      "Para que nadie lo use sin tu permiso",
+      "Para ahorrar batería"
+    ],
+    "correcta": 2,
+    "explicacion": "Si pierdes el móvil, el bloqueo impide que otros accedan a tus datos.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-20",
+    "nivel": "basico",
+    "competencia": "navegacion",
+    "pregunta": "¿Qué es un buscador como Google?",
+    "opciones": [
+      "Un programa para escribir",
+      "Una web para encontrar información en internet",
+      "Un antivirus",
+      "Un tipo de cable de red"
+    ],
+    "correcta": 1,
+    "explicacion": "Los buscadores rastrean millones de páginas y te muestran las que encajan con lo que escribes.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-21",
+    "nivel": "basico",
+    "competencia": "navegacion",
+    "pregunta": "¿Qué hace el botón «Atrás» del navegador?",
+    "opciones": [
+      "Cierra el navegador",
+      "Borra el historial",
+      "Vuelve a la página anterior",
+      "Recarga la página"
+    ],
+    "correcta": 2,
+    "explicacion": "La flecha hacia la izquierda te devuelve a la página que visitabas antes.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-22",
+    "nivel": "basico",
+    "competencia": "navegacion",
+    "pregunta": "¿Qué es un marcador (o favorito) del navegador?",
+    "opciones": [
+      "Un acceso guardado a una página web",
+      "Un virus",
+      "Un archivo descargado",
+      "Una contraseña guardada"
+    ],
+    "correcta": 0,
+    "explicacion": "Sirve para volver a una página con un clic sin tener que buscarla.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-23",
+    "nivel": "basico",
+    "competencia": "navegacion",
+    "pregunta": "¿Qué es el historial del navegador?",
+    "opciones": [
+      "La lista de páginas que has visitado",
+      "La lista de descargas",
+      "Tus correos enviados",
+      "Tus contraseñas guardadas"
+    ],
+    "correcta": 0,
+    "explicacion": "Puedes consultarlo o borrarlo desde el menú del navegador (Ctrl + H en muchos).",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-24",
+    "nivel": "basico",
+    "competencia": "navegacion",
+    "pregunta": "En una dirección de correo electrónico, ¿qué separa el usuario del dominio?",
+    "opciones": [
+      "La arroba (@)",
+      "El punto (.)",
+      "El guion (-)",
+      "La barra (/)"
+    ],
+    "correcta": 0,
+    "explicacion": "Por ejemplo, en ana@ejemplo.es, «ana» es el usuario y «ejemplo.es» el dominio.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-25",
+    "nivel": "basico",
+    "competencia": "navegacion",
+    "pregunta": "¿Qué es un archivo adjunto?",
+    "opciones": [
+      "La firma del correo",
+      "Un archivo que se envía junto a un correo",
+      "El asunto del correo",
+      "Un correo reenviado"
+    ],
+    "correcta": 1,
+    "explicacion": "Se añade con el clip. Ten cuidado con adjuntos de remitentes desconocidos.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-26",
+    "nivel": "basico",
+    "competencia": "navegacion",
+    "pregunta": "¿Para qué sirve el campo «Asunto» de un correo?",
+    "opciones": [
+      "Para poner la firma",
+      "Para resumir de qué trata el mensaje",
+      "Para escribir la dirección",
+      "Para adjuntar archivos"
+    ],
+    "correcta": 1,
+    "explicacion": "Un buen asunto ayuda a que el destinatario sepa de qué va el correo antes de abrirlo.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-27",
+    "nivel": "basico",
+    "competencia": "navegacion",
+    "pregunta": "En el navegador, ¿qué hace la tecla F5?",
+    "opciones": [
+      "Abre el historial",
+      "Cierra la pestaña",
+      "Guarda la página",
+      "Recarga la página"
+    ],
+    "correcta": 3,
+    "explicacion": "F5 vuelve a cargar la página para ver su versión más reciente.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-28",
+    "nivel": "basico",
+    "competencia": "navegacion",
+    "pregunta": "¿Qué es una pestaña del navegador?",
+    "opciones": [
+      "Una descarga",
+      "Una forma de tener varias páginas abiertas en la misma ventana",
+      "Un marcador",
+      "Una extensión"
+    ],
+    "correcta": 1,
+    "explicacion": "Ctrl + T abre una pestaña nueva y Ctrl + W cierra la actual.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-29",
+    "nivel": "basico",
+    "competencia": "textos",
+    "pregunta": "En un procesador de textos, ¿qué hace la negrita?",
+    "opciones": [
+      "Resalta el texto con un trazo más grueso",
+      "Lo subraya",
+      "Cambia su color",
+      "Lo pone en cursiva"
+    ],
+    "correcta": 0,
+    "explicacion": "La negrita sirve para destacar palabras importantes.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-30",
+    "nivel": "basico",
+    "competencia": "textos",
+    "pregunta": "¿Qué es la alineación «justificada»?",
+    "opciones": [
+      "El texto queda alineado a ambos márgenes",
+      "Solo alineado a la izquierda",
+      "Centrado en la página",
+      "Solo alineado a la derecha"
+    ],
+    "correcta": 0,
+    "explicacion": "Justificar reparte los espacios para que las líneas lleguen a los dos márgenes.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-31",
+    "nivel": "basico",
+    "competencia": "textos",
+    "pregunta": "¿Qué hace el corrector ortográfico?",
+    "opciones": [
+      "Traduce el texto",
+      "Marca las palabras mal escritas",
+      "Cuenta las palabras",
+      "Cambia la fuente"
+    ],
+    "correcta": 1,
+    "explicacion": "Suele subrayarlas en rojo y te propone cómo escribirlas bien.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-32",
+    "nivel": "basico",
+    "competencia": "textos",
+    "pregunta": "¿Qué es la fuente de un texto?",
+    "opciones": [
+      "El tipo de letra",
+      "El margen",
+      "El tamaño del papel",
+      "El color de fondo"
+    ],
+    "correcta": 0,
+    "explicacion": "Por ejemplo, Arial o Times New Roman. Se puede cambiar junto con el tamaño.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-33",
+    "nivel": "basico",
+    "competencia": "textos",
+    "pregunta": "¿Qué hace Ctrl + P en la mayoría de programas?",
+    "opciones": [
+      "Abrir un archivo",
+      "Guardar",
+      "Pegar",
+      "Imprimir"
+    ],
+    "correcta": 3,
+    "explicacion": "Abre la ventana de impresión. Para pegar se usa Ctrl + V.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-34",
+    "nivel": "basico",
+    "competencia": "textos",
+    "pregunta": "¿Para qué sirve «Buscar y reemplazar»?",
+    "opciones": [
+      "Para corregir la ortografía",
+      "Para buscar archivos en el ordenador",
+      "Para cambiar una palabra por otra en todo el documento",
+      "Para insertar imágenes"
+    ],
+    "correcta": 2,
+    "explicacion": "Ahorra mucho tiempo cuando hay que cambiar el mismo texto en muchos sitios.",
+    "gratis": false
+  },
+  {
+    "id": "banco-basico-35",
+    "nivel": "basico",
+    "competencia": "textos",
+    "pregunta": "¿Qué son los márgenes de una página?",
+    "opciones": [
+      "El encabezado",
+      "Las líneas del texto",
+      "El espacio en blanco entre el texto y el borde del papel",
+      "La numeración de páginas"
+    ],
+    "correcta": 2,
+    "explicacion": "Se ajustan en la configuración de página: superior, inferior, izquierdo y derecho.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-1",
+    "nivel": "medio",
+    "competencia": "textos",
+    "pregunta": "¿Qué es el encabezado de un documento?",
+    "opciones": [
+      "El índice",
+      "La zona superior que se repite en todas las páginas",
+      "El título del primer párrafo",
+      "La portada"
+    ],
+    "correcta": 1,
+    "explicacion": "En el encabezado se suele poner el título, el logo o el nombre del autor. Abajo está el pie de página.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-2",
+    "nivel": "medio",
+    "competencia": "textos",
+    "pregunta": "¿Qué ventaja tiene usar estilos de título en un documento?",
+    "opciones": [
+      "Permiten crear un índice automático y un formato coherente",
+      "Protegen el documento",
+      "Corrigen la ortografía",
+      "Hacen que el archivo pese menos"
+    ],
+    "correcta": 0,
+    "explicacion": "Si cambias el estilo, cambian todos los títulos a la vez, y el índice se genera solo.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-3",
+    "nivel": "medio",
+    "competencia": "textos",
+    "pregunta": "¿Qué es una sangría?",
+    "opciones": [
+      "Un tipo de fuente",
+      "El desplazamiento del texto respecto al margen",
+      "Una nota al pie",
+      "El espacio entre letras"
+    ],
+    "correcta": 1,
+    "explicacion": "Por ejemplo, la sangría de primera línea mete hacia dentro el inicio de cada párrafo.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-4",
+    "nivel": "medio",
+    "competencia": "textos",
+    "pregunta": "¿Qué es una nota al pie?",
+    "opciones": [
+      "El encabezado",
+      "El número de página",
+      "Un comentario de revisión",
+      "Una aclaración numerada en la parte inferior de la página"
+    ],
+    "correcta": 3,
+    "explicacion": "Se marca con un número en el texto y la explicación aparece abajo.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-5",
+    "nivel": "medio",
+    "competencia": "textos",
+    "pregunta": "¿Para qué sirve «Control de cambios»?",
+    "opciones": [
+      "Para guardar automáticamente",
+      "Para comparar fuentes",
+      "Para cambiar el idioma",
+      "Para ver y aceptar o rechazar las modificaciones de otras personas"
+    ],
+    "correcta": 3,
+    "explicacion": "Muy útil al revisar documentos entre varias personas.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-6",
+    "nivel": "medio",
+    "competencia": "textos",
+    "pregunta": "Una página más ancha que alta tiene orientación…",
+    "opciones": [
+      "Centrada",
+      "Justificada",
+      "Horizontal",
+      "Vertical"
+    ],
+    "correcta": 2,
+    "explicacion": "Horizontal también se llama apaisada. La vertical es la habitual de un folio.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-7",
+    "nivel": "medio",
+    "competencia": "textos",
+    "pregunta": "¿Para qué sirve un salto de sección?",
+    "opciones": [
+      "Para dividir el documento en partes con distinto formato (márgenes, orientación…)",
+      "Para pasar a la página siguiente sin más",
+      "Para crear columnas de texto automáticamente",
+      "Para insertar una tabla"
+    ],
+    "correcta": 0,
+    "explicacion": "Por ejemplo, para tener una sola página en horizontal dentro de un documento vertical.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-8",
+    "nivel": "medio",
+    "competencia": "calculo",
+    "pregunta": "En una hoja de cálculo, ¿qué devuelve =MIN(4;9;2)?",
+    "opciones": [
+      "9",
+      "15",
+      "2",
+      "4"
+    ],
+    "correcta": 2,
+    "explicacion": "MIN devuelve el valor más pequeño y MAX el más grande.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-9",
+    "nivel": "medio",
+    "competencia": "calculo",
+    "pregunta": "¿Qué resultado da =SUMA(2;3)*2?",
+    "opciones": [
+      "7",
+      "10",
+      "8",
+      "12"
+    ],
+    "correcta": 1,
+    "explicacion": "Primero se calcula la función, SUMA(2;3) = 5, y después se multiplica por 2.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-10",
+    "nivel": "medio",
+    "competencia": "calculo",
+    "pregunta": "¿Qué resultado da la fórmula =2+3*2?",
+    "opciones": [
+      "7",
+      "8",
+      "12",
+      "10"
+    ],
+    "correcta": 1,
+    "explicacion": "La multiplicación se hace antes que la suma: 3*2 = 6, y 6 + 2 = 8. Usa paréntesis para cambiar el orden.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-11",
+    "nivel": "medio",
+    "competencia": "calculo",
+    "pregunta": "¿Cómo se llama la celda de la columna C y la fila 5?",
+    "opciones": [
+      "F5C3",
+      "5C",
+      "C5",
+      "C:5"
+    ],
+    "correcta": 2,
+    "explicacion": "Primero va la letra de la columna y después el número de la fila.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-12",
+    "nivel": "medio",
+    "competencia": "calculo",
+    "pregunta": "¿Qué indica el error #¿NOMBRE? en una celda?",
+    "opciones": [
+      "Que la columna es estrecha",
+      "Que falta una hoja",
+      "Que hay una función o un texto que la hoja no reconoce",
+      "Que estás dividiendo entre cero"
+    ],
+    "correcta": 2,
+    "explicacion": "Suele pasar al escribir mal el nombre de una función o un texto sin comillas.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-13",
+    "nivel": "medio",
+    "competencia": "calculo",
+    "pregunta": "Si A1:A4 contiene 2, 4, 6 y 8, ¿qué devuelve =PROMEDIO(A1:A4)?",
+    "opciones": [
+      "4",
+      "5",
+      "20",
+      "6"
+    ],
+    "correcta": 1,
+    "explicacion": "Suma 20 y lo divide entre 4 valores: 5.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-14",
+    "nivel": "medio",
+    "competencia": "calculo",
+    "pregunta": "¿Para qué sirve el controlador de relleno (el cuadradito de la esquina de la celda)?",
+    "opciones": [
+      "Para cambiar el color",
+      "Para copiar o continuar una serie arrastrando",
+      "Para insertar una fila",
+      "Para borrar la celda"
+    ],
+    "correcta": 1,
+    "explicacion": "Arrastrándolo copias fórmulas o continúas series como 1, 2, 3 o enero, febrero…",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-15",
+    "nivel": "medio",
+    "competencia": "calculo",
+    "pregunta": "¿Qué gráfico es mejor para ver la evolución de las ventas mes a mes?",
+    "opciones": [
+      "De radar",
+      "De anillos",
+      "Circular",
+      "De líneas"
+    ],
+    "correcta": 3,
+    "explicacion": "Las líneas muestran bien cómo cambia un valor a lo largo del tiempo.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-16",
+    "nivel": "medio",
+    "competencia": "calculo",
+    "pregunta": "¿Qué hace la función =HOY()?",
+    "opciones": [
+      "Suma dos fechas",
+      "Cuenta los días del mes",
+      "Muestra la hora con segundos",
+      "Muestra la fecha actual"
+    ],
+    "correcta": 3,
+    "explicacion": "Se actualiza sola cada día. =AHORA() incluye además la hora.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-17",
+    "nivel": "medio",
+    "competencia": "calculo",
+    "pregunta": "Si copias la fórmula =A1*2 de la celda B1 a la B2, ¿qué queda en B2?",
+    "opciones": [
+      "=B1*2",
+      "=A1*2",
+      "=A3*2",
+      "=A2*2"
+    ],
+    "correcta": 3,
+    "explicacion": "Las referencias relativas se ajustan al copiar: al bajar una fila, A1 pasa a ser A2.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-18",
+    "nivel": "medio",
+    "competencia": "navegacion",
+    "pregunta": "¿Qué es una VPN?",
+    "opciones": [
+      "Una conexión cifrada que protege lo que envías",
+      "Un antivirus",
+      "Un tipo de correo",
+      "Un navegador"
+    ],
+    "correcta": 0,
+    "explicacion": "Es útil, por ejemplo, en redes wifi públicas.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-19",
+    "nivel": "medio",
+    "competencia": "navegacion",
+    "pregunta": "¿Qué hace el modo incógnito del navegador?",
+    "opciones": [
+      "Bloquea todos los virus",
+      "No guarda historial ni cookies al cerrar, pero no te hace anónimo",
+      "Te hace totalmente anónimo en internet",
+      "Acelera la conexión"
+    ],
+    "correcta": 1,
+    "explicacion": "Tu proveedor de internet y las webs pueden seguir viendo lo que haces.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-20",
+    "nivel": "medio",
+    "competencia": "civismo",
+    "pregunta": "¿Para qué sirve un certificado digital?",
+    "opciones": [
+      "Para eliminar virus",
+      "Para identificarte en internet y hacer trámites oficiales",
+      "Para demostrar un título académico",
+      "Para conectarte a la wifi"
+    ],
+    "correcta": 1,
+    "explicacion": "Con él puedes, por ejemplo, hacer trámites con Hacienda o la Seguridad Social desde casa.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-21",
+    "nivel": "medio",
+    "competencia": "civismo",
+    "pregunta": "¿Qué es el ransomware?",
+    "opciones": [
+      "Un navegador seguro",
+      "Un programa malicioso que cifra tus archivos y pide un rescate",
+      "Un tipo de spam",
+      "Un antivirus gratuito"
+    ],
+    "correcta": 1,
+    "explicacion": "La mejor defensa: copias de seguridad y no abrir adjuntos sospechosos.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-22",
+    "nivel": "medio",
+    "competencia": "civismo",
+    "pregunta": "¿Qué licencia Creative Commons te permite usar una obra siempre que cites al autor?",
+    "opciones": [
+      "CC BY (Reconocimiento)",
+      "Todos los derechos reservados",
+      "Uso exclusivo del autor",
+      "Licencia de prueba"
+    ],
+    "correcta": 0,
+    "explicacion": "BY significa que hay que reconocer la autoría. Otras variantes añaden condiciones, como NC (no comercial).",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-23",
+    "nivel": "medio",
+    "competencia": "navegacion",
+    "pregunta": "¿Qué significa trabajar en la nube?",
+    "opciones": [
+      "Guardar todo en un USB",
+      "Usar programas y archivos alojados en servidores de internet",
+      "Conectarse por wifi",
+      "Usar un antivirus"
+    ],
+    "correcta": 1,
+    "explicacion": "Por ejemplo, Google Drive u OneDrive: accedes a tus archivos desde cualquier dispositivo.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-24",
+    "nivel": "medio",
+    "competencia": "navegacion",
+    "pregunta": "¿Qué es una videoconferencia?",
+    "opciones": [
+      "Una descarga de música",
+      "Un envío masivo de correos",
+      "Un programa para editar vídeos",
+      "Una comunicación con audio y vídeo en tiempo real"
+    ],
+    "correcta": 3,
+    "explicacion": "Herramientas como Teams, Zoom o Meet permiten reunirse a distancia.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-25",
+    "nivel": "medio",
+    "competencia": "navegacion",
+    "pregunta": "¿Qué es un documento compartido en la nube?",
+    "opciones": [
+      "Un correo reenviado",
+      "Una copia en un USB",
+      "Un PDF bloqueado",
+      "Un archivo que varias personas pueden editar a la vez"
+    ],
+    "correcta": 3,
+    "explicacion": "Puedes dar permisos de solo lectura, de comentario o de edición.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-26",
+    "nivel": "medio",
+    "competencia": "multimedia",
+    "pregunta": "¿Qué es la resolución de una imagen?",
+    "opciones": [
+      "Lo que pesa en el disco",
+      "Su brillo",
+      "Su formato de archivo",
+      "El número de píxeles que la forman"
+    ],
+    "correcta": 3,
+    "explicacion": "Por ejemplo, 1920 × 1080 píxeles. Más resolución, más detalle.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-27",
+    "nivel": "medio",
+    "competencia": "multimedia",
+    "pregunta": "¿Qué formato de imagen permite tener el fondo transparente?",
+    "opciones": [
+      "JPG",
+      "PNG",
+      "MP4",
+      "TXT"
+    ],
+    "correcta": 1,
+    "explicacion": "El JPG no admite transparencia: el fondo siempre sale de un color.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-28",
+    "nivel": "medio",
+    "competencia": "multimedia",
+    "pregunta": "¿Qué es recortar una imagen?",
+    "opciones": [
+      "Reducir lo que pesa",
+      "Quitar partes de los bordes",
+      "Cambiar su formato",
+      "Aplicarle un filtro"
+    ],
+    "correcta": 1,
+    "explicacion": "Sirve para encuadrar mejor o eliminar lo que sobra.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-29",
+    "nivel": "medio",
+    "competencia": "multimedia",
+    "pregunta": "¿Cuál de estos formatos es de vídeo?",
+    "opciones": [
+      "DOCX",
+      "MP4",
+      "PNG",
+      "MP3"
+    ],
+    "correcta": 1,
+    "explicacion": "MP3 es audio, PNG imagen y DOCX documento de texto.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-30",
+    "nivel": "medio",
+    "competencia": "presentaciones",
+    "pregunta": "En un programa de presentaciones, ¿qué hace el modo «Presentación con diapositivas»?",
+    "opciones": [
+      "Ordena las diapositivas",
+      "Imprime la presentación",
+      "Muestra las diapositivas a pantalla completa",
+      "Edita el patrón"
+    ],
+    "correcta": 2,
+    "explicacion": "Es el modo para proyectar delante del público. Se suele iniciar con F5.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-31",
+    "nivel": "medio",
+    "competencia": "presentaciones",
+    "pregunta": "¿Para qué sirve la vista «Clasificador de diapositivas»?",
+    "opciones": [
+      "Para ver todas en miniatura y reordenarlas",
+      "Para añadir transiciones",
+      "Para ver las notas",
+      "Para insertar tablas"
+    ],
+    "correcta": 0,
+    "explicacion": "Es la forma más cómoda de cambiar el orden de muchas diapositivas.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-32",
+    "nivel": "medio",
+    "competencia": "presentaciones",
+    "pregunta": "¿Para qué sirven las notas del orador?",
+    "opciones": [
+      "Para cambiar el diseño",
+      "Para que las vea el público",
+      "Para tener apuntes que solo ve quien presenta",
+      "Para animar objetos"
+    ],
+    "correcta": 2,
+    "explicacion": "En la vista del moderador puedes leerlas mientras el público solo ve la diapositiva.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-33",
+    "nivel": "medio",
+    "competencia": "datos",
+    "pregunta": "En una base de datos, ¿qué es un registro?",
+    "opciones": [
+      "Un informe",
+      "Una columna",
+      "Una fila con los datos de un elemento",
+      "Una tabla entera"
+    ],
+    "correcta": 2,
+    "explicacion": "Por ejemplo, todos los datos de un cliente concreto.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-34",
+    "nivel": "medio",
+    "competencia": "datos",
+    "pregunta": "En una base de datos, ¿qué es un campo?",
+    "opciones": [
+      "Una columna con un tipo de dato",
+      "Una consulta",
+      "Un formulario",
+      "Una fila"
+    ],
+    "correcta": 0,
+    "explicacion": "Por ejemplo, el campo «Ciudad» de todos los clientes.",
+    "gratis": false
+  },
+  {
+    "id": "banco-medio-35",
+    "nivel": "medio",
+    "competencia": "datos",
+    "pregunta": "¿Qué tipo de dato usarías para guardar una fecha de nacimiento?",
+    "opciones": [
+      "Fecha",
+      "Sí/No",
+      "Texto largo",
+      "Moneda"
+    ],
+    "correcta": 0,
+    "explicacion": "Usar el tipo Fecha permite ordenar y hacer cálculos, como la edad.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-1",
+    "nivel": "avanzado",
+    "competencia": "calculo",
+    "pregunta": "¿Qué devuelve =SI(A1>10;\"Alto\";\"Bajo\") si A1 vale 10?",
+    "opciones": [
+      "10",
+      "Alto",
+      "Bajo",
+      "Un error"
+    ],
+    "correcta": 2,
+    "explicacion": "10 no es mayor que 10, así que la condición es falsa. Para incluirlo, usa >=.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-2",
+    "nivel": "avanzado",
+    "competencia": "calculo",
+    "pregunta": "¿Qué hace la fórmula =SI.ERROR(A1/B1;0)?",
+    "opciones": [
+      "Borra los errores de la hoja",
+      "Devuelve 0 si la división da error",
+      "Divide siempre entre 0",
+      "Cuenta los errores"
+    ],
+    "correcta": 1,
+    "explicacion": "SI.ERROR muestra un valor alternativo cuando la fórmula falla, por ejemplo con #¡DIV/0!.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-3",
+    "nivel": "avanzado",
+    "competencia": "calculo",
+    "pregunta": "Si A1:A5 contiene 3 números y 2 textos, ¿qué devuelve =CONTAR(A1:A5)?",
+    "opciones": [
+      "5",
+      "0",
+      "3",
+      "2"
+    ],
+    "correcta": 2,
+    "explicacion": "CONTAR solo cuenta celdas con números. Para contar todas las que no están vacías se usa CONTARA.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-4",
+    "nivel": "avanzado",
+    "competencia": "calculo",
+    "pregunta": "¿Qué función cuenta las celdas que no están vacías?",
+    "opciones": [
+      "SUMA",
+      "CONTAR.BLANCO",
+      "CONTARA",
+      "CONTAR"
+    ],
+    "correcta": 2,
+    "explicacion": "CONTAR.BLANCO hace justo lo contrario: cuenta las vacías.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-5",
+    "nivel": "avanzado",
+    "competencia": "calculo",
+    "pregunta": "¿Qué devuelve =REDONDEAR(3,456;1)?",
+    "opciones": [
+      "3,5",
+      "3,4",
+      "3,46",
+      "3"
+    ],
+    "correcta": 0,
+    "explicacion": "El segundo número indica los decimales: con 1 decimal, 3,456 se redondea a 3,5.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-6",
+    "nivel": "avanzado",
+    "competencia": "calculo",
+    "pregunta": "¿Para qué sirve una tabla dinámica?",
+    "opciones": [
+      "Para dibujar gráficos en 3D",
+      "Para resumir y agrupar muchos datos de forma interactiva",
+      "Para proteger la hoja",
+      "Para ordenar alfabéticamente"
+    ],
+    "correcta": 1,
+    "explicacion": "Permite ver, por ejemplo, las ventas totales por mes y por vendedor arrastrando campos.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-7",
+    "nivel": "avanzado",
+    "competencia": "calculo",
+    "pregunta": "¿Qué referencia fija solo la columna al copiar la fórmula?",
+    "opciones": [
+      "$A$1",
+      "A1",
+      "A$1",
+      "$A1"
+    ],
+    "correcta": 3,
+    "explicacion": "El $ fija lo que tiene justo detrás: $A1 fija la columna A y deja libre la fila.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-8",
+    "nivel": "avanzado",
+    "competencia": "calculo",
+    "pregunta": "¿Qué hace el formato condicional?",
+    "opciones": [
+      "Protege las celdas",
+      "Cambia el formato de las celdas según su valor",
+      "Crea fórmulas automáticamente",
+      "Ordena los datos"
+    ],
+    "correcta": 1,
+    "explicacion": "Por ejemplo, poner en rojo las notas por debajo de 5.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-9",
+    "nivel": "avanzado",
+    "competencia": "calculo",
+    "pregunta": "¿Qué devuelve =Y(5>3;2>4)?",
+    "opciones": [
+      "Un error",
+      "VERDADERO",
+      "5",
+      "FALSO"
+    ],
+    "correcta": 3,
+    "explicacion": "Y solo devuelve VERDADERO si se cumplen todas las condiciones, y 2>4 es falso.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-10",
+    "nivel": "avanzado",
+    "competencia": "calculo",
+    "pregunta": "¿Qué devuelve =O(5>3;2>4)?",
+    "opciones": [
+      "VERDADERO",
+      "Un error",
+      "2",
+      "FALSO"
+    ],
+    "correcta": 0,
+    "explicacion": "O devuelve VERDADERO si se cumple al menos una condición, y 5>3 es verdadero.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-11",
+    "nivel": "avanzado",
+    "competencia": "calculo",
+    "pregunta": "Si A1:A4 contiene 3, 6, 8 y 2, ¿qué devuelve =SUMAR.SI(A1:A4;\">5\")?",
+    "opciones": [
+      "19",
+      "14",
+      "8",
+      "2"
+    ],
+    "correcta": 1,
+    "explicacion": "Solo suma los valores mayores que 5: 6 + 8 = 14.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-12",
+    "nivel": "avanzado",
+    "competencia": "calculo",
+    "pregunta": "¿Para qué sirve la validación de datos?",
+    "opciones": [
+      "Para calcular totales",
+      "Para hacer copias de seguridad",
+      "Para revisar la ortografía",
+      "Para limitar qué valores se pueden escribir en una celda"
+    ],
+    "correcta": 3,
+    "explicacion": "Por ejemplo, permitir solo números entre 0 y 10, o elegir de una lista desplegable.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-13",
+    "nivel": "avanzado",
+    "competencia": "datos",
+    "pregunta": "En una base de datos, ¿qué es la integridad referencial?",
+    "opciones": [
+      "Una copia de seguridad",
+      "Un tipo de informe",
+      "Impedir que un registro apunte a datos que no existen",
+      "Cifrar la base de datos"
+    ],
+    "correcta": 2,
+    "explicacion": "Por ejemplo, no deja crear un pedido para un cliente que no está en la tabla de clientes.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-14",
+    "nivel": "avanzado",
+    "competencia": "datos",
+    "pregunta": "¿Qué es una clave externa (o foránea)?",
+    "opciones": [
+      "El primer campo de la tabla",
+      "Un campo oculto",
+      "La contraseña de la base de datos",
+      "Un campo que enlaza con la clave primaria de otra tabla"
+    ],
+    "correcta": 3,
+    "explicacion": "Así se relacionan las tablas: el pedido guarda el ID del cliente.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-15",
+    "nivel": "avanzado",
+    "competencia": "datos",
+    "pregunta": "En una consulta, ¿qué criterio muestra los clientes de Girona y también los de Lleida?",
+    "opciones": [
+      "Ciudad = «GironaLleida»",
+      "Ciudad = «Girona» Y Ciudad = «Lleida»",
+      "Ciudad distinta de «Girona»",
+      "Ciudad = «Girona» O Ciudad = «Lleida»"
+    ],
+    "correcta": 3,
+    "explicacion": "Con Y no saldría nadie: ningún cliente puede ser de las dos ciudades a la vez.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-16",
+    "nivel": "avanzado",
+    "competencia": "datos",
+    "pregunta": "¿Qué es una relación varios a varios?",
+    "opciones": [
+      "Una tabla con muchos campos",
+      "Muchos registros de una tabla con muchos de otra, a través de una tabla intermedia",
+      "Un informe agrupado",
+      "Una tabla con dos claves primarias"
+    ],
+    "correcta": 1,
+    "explicacion": "Por ejemplo, alumnos y asignaturas: se resuelve con una tabla de matrículas.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-17",
+    "nivel": "avanzado",
+    "competencia": "datos",
+    "pregunta": "¿Para qué sirve ordenar una consulta?",
+    "opciones": [
+      "Para crear tablas",
+      "Para mostrar los resultados en un orden concreto",
+      "Para borrar duplicados",
+      "Para filtrar registros"
+    ],
+    "correcta": 1,
+    "explicacion": "Por ejemplo, de la A a la Z por apellido o de mayor a menor importe.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-18",
+    "nivel": "avanzado",
+    "competencia": "datos",
+    "pregunta": "¿Qué es un campo calculado en una consulta?",
+    "opciones": [
+      "Un campo vacío",
+      "Un campo cuyo valor sale de una expresión, como Precio * Cantidad",
+      "Un campo que solo admite números",
+      "La clave primaria"
+    ],
+    "correcta": 1,
+    "explicacion": "No se guarda en la tabla: se calcula cada vez que ejecutas la consulta.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-19",
+    "nivel": "avanzado",
+    "competencia": "datos",
+    "pregunta": "¿Qué hace una consulta de actualización?",
+    "opciones": [
+      "Importa una tabla",
+      "Crea un informe",
+      "Solo muestra datos",
+      "Modifica a la vez los datos de varios registros"
+    ],
+    "correcta": 3,
+    "explicacion": "Por ejemplo, subir un 5 % el precio de todos los productos de una categoría.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-20",
+    "nivel": "avanzado",
+    "competencia": "datos",
+    "pregunta": "¿Por qué conviene no repetir los mismos datos en varias tablas?",
+    "opciones": [
+      "Porque los informes no funcionan",
+      "Porque la ley lo prohíbe",
+      "Para evitar errores e incoherencias al modificarlos",
+      "Porque el programa no lo permite"
+    ],
+    "correcta": 2,
+    "explicacion": "Es la idea de la normalización: cada dato en un solo sitio y relacionado con el resto.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-21",
+    "nivel": "avanzado",
+    "competencia": "textos",
+    "pregunta": "¿Qué es un índice (tabla de contenido) automático?",
+    "opciones": [
+      "Un índice escrito a mano",
+      "Una tabla con datos",
+      "Las notas al pie",
+      "Una lista que se genera a partir de los estilos de título y se actualiza sola"
+    ],
+    "correcta": 3,
+    "explicacion": "Por eso es tan importante aplicar estilos de título a los apartados.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-22",
+    "nivel": "avanzado",
+    "competencia": "textos",
+    "pregunta": "¿Qué es una plantilla de documento?",
+    "opciones": [
+      "Una copia de seguridad",
+      "Un tipo de fuente",
+      "Un documento base con formato y estructura para reutilizar",
+      "Un PDF protegido"
+    ],
+    "correcta": 2,
+    "explicacion": "Por ejemplo, una plantilla de factura o de carta con el logo de la empresa.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-23",
+    "nivel": "avanzado",
+    "competencia": "textos",
+    "pregunta": "¿Para qué sirve insertar el número de página como campo en el pie?",
+    "opciones": [
+      "Para numerar automáticamente todas las páginas",
+      "Para insertar un índice",
+      "Para numerar solo la primera",
+      "Para contar las palabras"
+    ],
+    "correcta": 0,
+    "explicacion": "Si añades o quitas páginas, la numeración se actualiza sola.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-24",
+    "nivel": "avanzado",
+    "competencia": "textos",
+    "pregunta": "¿Qué es una referencia cruzada?",
+    "opciones": [
+      "Un comentario de revisión",
+      "Una nota al pie",
+      "Un enlace a una web",
+      "Un enlace a otra parte del documento que se actualiza solo"
+    ],
+    "correcta": 3,
+    "explicacion": "Por ejemplo, «ver figura 3»: si la figura cambia de número, la referencia también.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-25",
+    "nivel": "avanzado",
+    "competencia": "textos",
+    "pregunta": "¿Qué formato conviene enviar si quieres que otra persona edite el documento?",
+    "opciones": [
+      ".docx o .odt",
+      ".mp3",
+      ".jpg",
+      ".pdf"
+    ],
+    "correcta": 0,
+    "explicacion": "El PDF está pensado para leer e imprimir, no para editar.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-26",
+    "nivel": "avanzado",
+    "competencia": "presentaciones",
+    "pregunta": "¿Para qué sirve un hipervínculo en una diapositiva?",
+    "opciones": [
+      "Para añadir una transición",
+      "Para saltar a otra diapositiva, a un archivo o a una web",
+      "Para animar un objeto",
+      "Para cambiar el patrón"
+    ],
+    "correcta": 1,
+    "explicacion": "Permite hacer presentaciones interactivas, como un menú que lleva a cada apartado.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-27",
+    "nivel": "avanzado",
+    "competencia": "presentaciones",
+    "pregunta": "¿Qué es una animación de «Entrada»?",
+    "opciones": [
+      "El efecto con el que un objeto aparece en la diapositiva",
+      "El paso de una diapositiva a otra",
+      "Un cambio de tema",
+      "Un sonido de fondo"
+    ],
+    "correcta": 0,
+    "explicacion": "Hay animaciones de entrada, de énfasis, de salida y trayectorias.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-28",
+    "nivel": "avanzado",
+    "competencia": "presentaciones",
+    "pregunta": "¿Cuál es una buena práctica al diseñar diapositivas?",
+    "opciones": [
+      "Poco texto, letra grande y buen contraste",
+      "Muchas fuentes distintas",
+      "Mucho texto para leerlo en voz alta",
+      "Animaciones en todos los elementos"
+    ],
+    "correcta": 0,
+    "explicacion": "La diapositiva apoya lo que dices: no tiene que contenerlo todo.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-29",
+    "nivel": "avanzado",
+    "competencia": "presentaciones",
+    "pregunta": "¿Para qué sirve exportar una presentación a PDF?",
+    "opciones": [
+      "Para tener más diapositivas",
+      "Para editarla mejor",
+      "Para añadir animaciones",
+      "Para compartirla sin que cambie el diseño"
+    ],
+    "correcta": 3,
+    "explicacion": "Se verá igual en cualquier ordenador, aunque se pierden las animaciones.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-30",
+    "nivel": "avanzado",
+    "competencia": "multimedia",
+    "pregunta": "¿Qué es la profundidad de color de una imagen?",
+    "opciones": [
+      "Su formato",
+      "Su tamaño en centímetros",
+      "El brillo de la imagen",
+      "Cuántos colores distintos puede tener cada píxel"
+    ],
+    "correcta": 3,
+    "explicacion": "Por ejemplo, 24 bits permiten unos 16,7 millones de colores.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-31",
+    "nivel": "avanzado",
+    "competencia": "multimedia",
+    "pregunta": "¿Qué ventaja tienen las imágenes vectoriales frente a las de mapa de bits?",
+    "opciones": [
+      "Siempre pesan más",
+      "Se pueden ampliar sin perder calidad",
+      "No admiten colores",
+      "Son más adecuadas para fotos"
+    ],
+    "correcta": 1,
+    "explicacion": "Se basan en formas matemáticas, por eso se usan para logos. Las fotos son mapas de bits (píxeles).",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-32",
+    "nivel": "avanzado",
+    "competencia": "multimedia",
+    "pregunta": "¿Qué es el bitrate de un audio o un vídeo?",
+    "opciones": [
+      "La cantidad de datos por segundo: más bitrate, más calidad y más peso",
+      "El número de pistas",
+      "Su duración",
+      "Su volumen"
+    ],
+    "correcta": 0,
+    "explicacion": "Por ejemplo, un MP3 a 320 kbps suena mejor y pesa más que uno a 128 kbps.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-33",
+    "nivel": "avanzado",
+    "competencia": "civismo",
+    "pregunta": "¿Qué es la ingeniería social?",
+    "opciones": [
+      "Un tipo de copia de seguridad",
+      "Programar redes sociales",
+      "Diseñar páginas web",
+      "Engañar a las personas para conseguir información o acceso"
+    ],
+    "correcta": 3,
+    "explicacion": "El phishing es un ejemplo: en vez de atacar el sistema, engañan a la persona.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-34",
+    "nivel": "avanzado",
+    "competencia": "civismo",
+    "pregunta": "¿En qué consiste la regla 3-2-1 de las copias de seguridad?",
+    "opciones": [
+      "Hacer una copia cada 3 días",
+      "3 copias, en 2 soportes distintos y 1 fuera de casa",
+      "3 discos duros, 2 USB y 1 nube",
+      "3 contraseñas, 2 correos y 1 móvil"
+    ],
+    "correcta": 1,
+    "explicacion": "Así, aunque falle un disco o haya un robo o un incendio, no pierdes tus datos.",
+    "gratis": false
+  },
+  {
+    "id": "banco-avanzado-35",
+    "nivel": "avanzado",
+    "competencia": "civismo",
+    "pregunta": "¿Qué es la accesibilidad digital?",
+    "opciones": [
+      "Que una web cargue rápido",
+      "Que un programa sea gratis",
+      "Que todo tenga contraseña",
+      "Que personas con discapacidad puedan usar webs y documentos"
+    ],
+    "correcta": 3,
+    "explicacion": "Por ejemplo, añadir texto alternativo a las imágenes o usar buen contraste.",
+    "gratis": false
+  }
+]

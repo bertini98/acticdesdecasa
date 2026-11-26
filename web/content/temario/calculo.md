@@ -25,3 +25,37 @@ El símbolo `$` **fija** la referencia al copiar la fórmula: `=B2*$A$1` siempre
 - **Filtrar** oculta las filas que no cumplen un criterio. **Ordenar** solo cambia el orden, no oculta nada.
 - **Inmovilizar paneles** deja fijas filas o columnas (por ejemplo, los títulos) mientras te desplazas.
 - Para mostrar qué parte del total representa cada dato, usa un **gráfico circular**.
+
+# Lo básico
+
+- Las celdas se nombran por **columna + fila**: C5 = columna C, fila 5.
+- **Orden de las operaciones**: primero multiplicaciones y divisiones, después sumas y restas (`=2+3*2` da 8). Usa paréntesis para cambiarlo.
+- **Controlador de relleno**: el cuadradito de la esquina; copia fórmulas o continúa series.
+- Al copiar una fórmula, las **referencias relativas** se ajustan (`=A1*2` pasa a `=A2*2`).
+
+# Más funciones
+
+- `=MIN()` y `=MAX()`: el menor y el mayor valor.
+- `=HOY()`: fecha actual (`=AHORA()` incluye la hora).
+- `=CONTAR()` cuenta números; `=CONTARA()` cuenta celdas no vacías; `=CONTAR.BLANCO()` las vacías.
+- `=SUMAR.SI(rango;">5")` suma solo lo que cumple la condición.
+- `=REDONDEAR(3,456;1)` da 3,5.
+- `=Y(...)` exige que se cumplan todas las condiciones; `=O(...)`, al menos una.
+- `=SI.ERROR(fórmula;valor)` muestra un valor alternativo si hay error.
+- `=BUSCARV(valor;tabla;columna;FALSO)` busca en la primera columna y devuelve un dato de esa fila.
+
+# Referencias absolutas y mixtas
+
+- `$A$1` fija columna y fila; `$A1` fija solo la columna; `A$1` fija solo la fila.
+
+# Más errores
+
+- `#¿NOMBRE?`: función mal escrita o texto sin comillas.
+
+# Herramientas avanzadas
+
+- **Formato condicional**: cambia el formato según el valor (por ejemplo, notas < 5 en rojo).
+- **Validación de datos**: limita lo que se puede escribir (rango de números, lista desplegable).
+- **Tabla dinámica**: resume y agrupa muchos datos de forma interactiva.
+- **Gráficos**: de líneas para la evolución en el tiempo; circular para partes de un total.
+- Si escribes `1/2`, la hoja lo convierte en una **fecha**; para la fracción, escribe `0 1/2`.

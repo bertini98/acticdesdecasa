@@ -13,7 +13,12 @@ export default function Temario() {
       <div className="list-links" style={{ marginTop: 20 }}>
         {COMPETENCIAS.filter((c) => temario(c.id)).map((c) => (
           <Link key={c.id} href={`/app/temario/${c.id}`}>
-            {c.nombre} <span aria-hidden>→</span>
+            <span>
+              {c.nombre}
+              <br />
+              <small className="muted" style={{ fontWeight: 500 }}>{c.oficial}</small>
+            </span>
+            <span aria-hidden>→</span>
           </Link>
         ))}
       </div>

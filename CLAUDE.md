@@ -34,7 +34,8 @@ Proyecto de Albert (GitHub `bertini98`): cuenta de Instagram **@acticdesdecasa**
 - Pendiente:
   1. Supabase → Authentication → URL Configuration: Site URL `https://acticdesdecasa.vercel.app` y Redirect URL `https://acticdesdecasa.vercel.app/auth/callback`; probar el acceso por enlace mágico.
   2. Poner el enlace en la bio de Instagram.
-  3. Dominio propio (opcional) y más preguntas para la web.
+  3. Dominio propio (opcional).
+- **Producto (contenido de la web):** 150 preguntas, 50 por nivel = 45 de los reels (`content/preguntas.json`, generado con `export_web.py`) + 105 propias de la web (`content/banco.json`, se edita a mano: misma estructura). Temario ampliado en `content/temario/*.md` (el conversor no admite tablas Markdown). Nombres "oficiales" de las competencias en `COMPETENCIAS` de `src/lib/content.ts`, sin verificar contra actic.gencat.cat (el dominio no era accesible desde el entorno). Simulacro: 20 preguntas / 30 min, orientativo.
   4. Stripe (modo prueba): cuenta del usuario, `node scripts/stripe-setup.mjs` con su clave, webhook, IBAN de Wise para los pagos. Antes de vender: gestor (no es autónomo), IVA, condiciones legales, ~300 preguntas revisadas.
 - Planes previstos: mensual 6,99 €, trimestral 9,99 € (destacado, «ahorras 52 %»), anual 19,99 € («ahorras 76 %») (`web/src/lib/plans.ts` y `PRECIOS` en `scripts/stripe-setup.mjs`).
 

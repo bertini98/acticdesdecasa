@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { COMPETENCIAS, NIVELES, competenciaNombre, preguntasDe, temario } from "@/lib/content";
+import { COMPETENCIAS, NIVELES, competenciaNombre, competenciaOficial, preguntasDe, temario } from "@/lib/content";
 import { markdownToHtml } from "@/lib/markdown";
 
 export function generateStaticParams() {
@@ -24,6 +24,7 @@ export default async function Tema({ params }: { params: Promise<{ tema: string 
         ← Temario
       </Link>
       <h1 style={{ fontSize: "2rem", marginTop: 12 }}>{competenciaNombre(tema)}</h1>
+      <p className="muted">Competencia ACTIC: {competenciaOficial(tema)}</p>
       <article className="prose" dangerouslySetInnerHTML={{ __html: markdownToHtml(md) }} />
       {niveles.length > 0 && (
         <div className="card" style={{ marginTop: 32, maxWidth: 720 }}>

@@ -20,3 +20,30 @@ Una buena contraseña es **larga** (12 caracteres o más), **mezcla** mayúscula
 - **Privativo:** el autor limita qué puedes hacer con él.
 
 > Ojo: que un programa sea gratis no significa que sea libre.
+
+# Amenazas habituales
+
+- **Spam**: correo masivo no deseado.
+- **Smishing**: phishing por SMS. Ningún banco te pide datos por un enlace en un mensaje: entra siempre por su web o app oficial.
+- **Ransomware**: malware que cifra tus archivos y pide un rescate.
+- **Ingeniería social**: engañar a las personas (no al sistema) para conseguir datos o acceso.
+
+# Buenas prácticas
+
+- **Actualiza** el sistema y los programas: corrigen fallos de seguridad.
+- En una **wifi pública abierta** evita trámites delicados o usa una **VPN**.
+- **Bloqueo de pantalla** con PIN, huella o cara en el móvil.
+- **Copias de seguridad**: regla **3-2-1** (3 copias, en 2 soportes distintos, 1 fuera de casa).
+
+# Privacidad y derechos
+
+- **Cookies**: pequeños archivos que guardan datos de tu navegación; las no imprescindibles necesitan tu permiso.
+- **Huella digital**: el rastro que dejas en internet con lo que publicas y haces.
+- **RGPD**: tienes derecho a acceder a tus datos, corregirlos, borrarlos y oponerte a su uso.
+- Para publicar la **foto de otra persona** necesitas su permiso.
+- **Certificado digital**: te identifica en internet para hacer trámites con la Administración.
+
+# Uso responsable de contenidos
+
+- **Creative Commons**: licencias que permiten usar obras con condiciones. **CC BY** = citando al autor; **NC** = sin uso comercial.
+- **Accesibilidad digital**: que webs y documentos puedan usarlos personas con discapacidad (texto alternativo en imágenes, buen contraste…).

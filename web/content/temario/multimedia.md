@@ -12,3 +12,15 @@
 - **Sin pérdida:** reduce el tamaño sin perder nada. Por ejemplo, un `.zip` o una imagen `.png`.
 
 > Si vuelves a guardar muchas veces un .jpg, cada vez pierde un poco más de calidad.
+
+# Imagen digital
+
+- **Resolución**: número de píxeles (por ejemplo, 1920 × 1080).
+- **Profundidad de color**: cuántos colores puede tener cada píxel (24 bits ≈ 16,7 millones).
+- **Mapa de bits** (fotos, formados por píxeles) frente a **vectoriales** (formas matemáticas: se amplían sin perder calidad; ideales para logos).
+- **Recortar**: quitar partes de los bordes para encuadrar.
+
+# Audio y vídeo
+
+- Formatos de vídeo: `.mp4`, `.avi`. De audio: `.mp3`, `.wav`.
+- **Bitrate**: datos por segundo. Más bitrate = más calidad y más peso.
