@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+import Link from "next/link";
+
 import Plans from "@/components/Plans";
 import { salesOpen } from "@/lib/config";
 
@@ -26,8 +28,10 @@ export default async function Precios({ searchParams }: { searchParams: Promise<
         )}
         <Plans />
         <p className="muted center" style={{ marginTop: 28, fontSize: "0.9rem" }}>
-          Pago seguro con Stripe. La suscripción se renueva automáticamente y puedes cancelarla en cualquier
-          momento desde tu cuenta. Precios con IVA incluido.
+          Pago seguro con Stripe. Precios con IVA incluido. La suscripción se renueva automáticamente (te avisamos
+          por email 15 días antes) y puedes cancelarla en cualquier momento desde tu cuenta, en dos clics. Al pagar
+          pides empezar a usar el contenido de inmediato, por lo que pierdes el derecho de desistimiento. Más
+          información en las <Link href="/legal/condiciones">condiciones de contratación</Link>.
         </p>
       </div>
     </section>

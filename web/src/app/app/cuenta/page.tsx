@@ -62,6 +62,10 @@ export default async function Cuenta() {
                 Cambia de plan, actualiza tu tarjeta, descarga facturas o cancela. Te llevamos a la página segura de
                 Stripe.
               </p>
+              <p className="muted" style={{ fontSize: "0.85rem" }}>
+                <Link href="/desistimiento">Desistir del contrato aquí</Link> (en los 14 días siguientes a la
+                contratación, si procede).
+              </p>
             </>
           ) : (
             <>

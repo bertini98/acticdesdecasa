@@ -90,7 +90,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/legal/aviso-legal">Aviso legal</Link>
               <Link href="/legal/privacidad">Privacidad</Link>
               <Link href="/legal/cookies">Cookies</Link>
-              <Link href="/legal/condiciones">Condiciones de compra</Link>
+              <Link href="/legal/condiciones">Condiciones de contratación</Link>
+              <Link href="/desistimiento">Desistir del contrato aquí</Link>
             </div>
             <p>
               acticdesdecasa es una web de preparación independiente. No está vinculada a la Generalitat de

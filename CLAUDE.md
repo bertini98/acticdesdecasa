@@ -44,3 +44,10 @@ Proyecto de Albert (GitHub `bertini98`): cuenta de Instagram **@acticdesdecasa**
 ## Entorno
 
 Usar el entorno de Claude Code **"acticdesdecasa"** (permite `acticdesdecasa.vercel.app` y ElevenLabs). Commits como `bertini98` con el email noreply de GitHub (no usar el email personal).
+
+## Normativa aplicada en la web (26/11/2026)
+
+- Páginas legales reescritas (`web/src/app/legal/[doc]/page.tsx`): aviso legal (LSSI), privacidad (RGPD/LOPDGDD, edad 14, encargados Supabase/Stripe/Vercel), cookies (solo técnicas), condiciones de contratación (precios desde `plans.ts`, renovación con aviso 15 días —Ley 10/2025, plazo de adaptación hasta ~28/12/2026—, baja en dos clics, desistimiento 14 días con excepción art. 103.m por consentimiento en el checkout, conformidad, atención gratuita con respuesta en 15 días hábiles, hojas oficiales de reclamación de la Generalitat, castellano/catalán, sin ADR).
+- Función de desistimiento online (Directiva 2023/2673; en España RDL 44/2026, art. 106 bis TRLGDCU, en vigor 25/01/2027 según fuentes secundarias): `/desistimiento` + `/api/desistimiento` → tabla `withdrawals` (añadida a `schema.sql`; **el usuario debe ejecutar ese bloque en Supabase**). Enlace «Desistir del contrato aquí» en el pie y en Mi cuenta. El titular revisa la tabla, confirma por email y reembolsa desde Stripe.
+- Pendiente en Stripe (usuario): activar emails de próxima renovación con 15 días (Billing → Subscriptions and emails), recibos por email, URL de condiciones en Public details y después `STRIPE_TERMS_CONSENT=true` en Vercel.
+- Fiscal: autónomo (tarifa plana ~80-89 €/mes primer año), IVA 21 % servicios digitales, Verifactu obligatorio para autónomos desde 1/07/2027 (posibles nuevos aplazamientos).

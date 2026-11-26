@@ -56,3 +56,17 @@ grant select on public.subscriptions to authenticated;
 grant select, insert on public.attempts to authenticated;
 grant all on public.subscriptions, public.attempts, public.waitlist to service_role;
 grant usage, select on all sequences in schema public to authenticated, service_role;
+
+-- Solicitudes de desistimiento (página /desistimiento). Solo las escribe y lee el servidor (service_role).
+create table if not exists public.withdrawals (
+  id uuid primary key default gen_random_uuid(),
+  email text not null,
+  nombre text,
+  plan text,
+  fecha_contrato date,
+  comentario text,
+  atendida boolean not null default false,
+  created_at timestamptz not null default now()
+);
+alter table public.withdrawals enable row level security;
+grant all on public.withdrawals to service_role;
