@@ -37,8 +37,9 @@ Proyecto de Albert (GitHub `bertini98`): cuenta de Instagram **@acticdesdecasa**
   3. Dominio propio (opcional).
 - **Producto (contenido de la web):** 150 preguntas, 50 por nivel = 45 de los reels (`content/preguntas.json`, generado con `export_web.py`) + 105 propias de la web (`content/banco.json`, se edita a mano: misma estructura). Temario ampliado en `content/temario/*.md` (el conversor no admite tablas Markdown). Nombres "oficiales" de las competencias en `COMPETENCIAS` de `src/lib/content.ts`, sin verificar contra actic.gencat.cat (el dominio no era accesible desde el entorno). Simulacro: 20 preguntas / 30 min, orientativo.
   4. Stripe (modo prueba): cuenta del usuario, `node scripts/stripe-setup.mjs` con su clave, webhook, IBAN de Wise para los pagos. Antes de vender: gestor (no es autónomo), IVA, condiciones legales, ~300 preguntas revisadas.
+- **Stripe (modo prueba) creado** por Claude con `web/scripts/stripe_setup.py`: producto `prod_VhNmpj4vVgg0fn`, precios mensual `price_1Ufz0lDprsOnpOHL2fHLEfCq`, trimestral `price_1Ufz0lDprsOnpOHLhiwBZYWO`, anual `price_1Ufz0mDprsOnpOHLyB5TmZgE`, portal `bpc_1Ufz0mDprsOnpOHLjXiKjVqu`. La clave sk_test está guardada como credencial de `api.stripe.com` en el entorno Default (el proxy la añade; usar `Bearer sk_test_proxy-injected`). La librería stripe de Node no pasa por el proxy: usar curl o urllib. Pendiente: webhook (lo crea el usuario) y variables STRIPE_* en Vercel.
 - Planes previstos: mensual 6,99 €, trimestral 9,99 € (destacado, «ahorras 52 %»), anual 19,99 € («ahorras 76 %») (`web/src/lib/plans.ts` y `PRECIOS` en `scripts/stripe-setup.mjs`).
 
 ## Entorno
 
-Usar el entorno de Claude Code **"acticdesdecasa"** (permite `acticdesdecasa.vercel.app` y ElevenLabs). Commits con el nombre `albertreig998`.
+Usar el entorno de Claude Code **"acticdesdecasa"** (permite `acticdesdecasa.vercel.app` y ElevenLabs). Commits como `bertini98` con el email noreply de GitHub (no usar el email personal).
