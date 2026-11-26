@@ -2,16 +2,17 @@ import { notFound } from "next/navigation";
 
 import { markdownToHtml } from "@/lib/markdown";
 
-// Revisar con un gestor o abogado antes de vender. NIF y domicilio son obligatorios al empezar a cobrar.
-const TITULAR = "Xavier Estada";
-const NIF = ""; // pendiente
-const DOMICILIO = ""; // pendiente
+// Revisar con un gestor o abogado antes de vender.
+// ANTES DE COBRAR la LSSI obliga a poner nombre, NIF y domicilio del titular real: rellenar TITULAR, NIF y DOMICILIO.
+// Mientras estén vacíos (fase de lista de espera), se muestra solo el nombre comercial y el email.
+const TITULAR = "";
+const NIF = "";
+const DOMICILIO = "";
 const EMAIL = "synetispotify@gmail.com";
 
-// "Xavier Estada, con NIF … y domicilio en …": solo los datos que ya tenemos
-const IDENTIDAD = [TITULAR, NIF && `con NIF ${NIF}`, DOMICILIO && `y domicilio en ${DOMICILIO}`]
-  .filter(Boolean)
-  .join(", ");
+const IDENTIDAD =
+  [TITULAR, NIF && `con NIF ${NIF}`, DOMICILIO && `y domicilio en ${DOMICILIO}`].filter(Boolean).join(", ") ||
+  "acticdesdecasa";
 
 const DOCS: Record<string, { titulo: string; md: string }> = {
   "aviso-legal": {

@@ -30,7 +30,7 @@ Proyecto de Albert (GitHub `bertini98`): cuenta de Instagram **@acticdesdecasa**
 - Supabase: proyecto `acticdesdecasa` (región West EU), URL `https://msunpwqhlhmyhsynaoie.supabase.co`. `web/supabase/schema.sql` ya ejecutado (tablas `subscriptions`, `attempts`, `waitlist`).
 - Variables en Vercel: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`. Ventas cerradas (`NEXT_PUBLIC_SALES_OPEN` sin poner = false): los botones llevan a la lista de espera.
 - Lista de espera **funcionando** (`/api/estado` da claves publishable/secret y base de datos ok). En Vercel: las `NEXT_PUBLIC_*` son tipo Config y `SUPABASE_SERVICE_ROLE_KEY` tipo Secret; tras cambiar variables hay que hacer Redeploy. Los emails se ven en Supabase → Table Editor → `waitlist`.
-- Páginas legales con titular **Xavier Estada** y contacto **synetispotify@gmail.com**; NIF y domicilio pendientes (obligatorios antes de vender).
+- Páginas legales: sin nombre de titular (el usuario no quiere que se vea su nombre; la cuenta de Wise está a nombre de Albert Reig), solo «acticdesdecasa» y contacto **synetispotify@gmail.com**. **Antes de cobrar** hay que poner nombre, NIF y domicilio del titular real (LSSI): ya se le ha explicado; alternativa: sociedad (SL) o plataforma que venda por él, consultar con gestor.
 - Pendiente:
   1. Supabase → Authentication → URL Configuration: Site URL `https://acticdesdecasa.vercel.app` y Redirect URL `https://acticdesdecasa.vercel.app/auth/callback`; probar el acceso por enlace mágico.
   2. Poner el enlace en la bio de Instagram.
