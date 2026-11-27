@@ -35,7 +35,7 @@ CX, CY, CS = 805, 1478, 400  # Casi
 # Guiones. Cada línea: (quién, archivo, texto del bocadillo, estado de los personajes durante la línea).
 REELS = {
     1: dict(
-        lv="basico", title="POV: el ACTIC es mañana",
+        lv="basico", title="POV: el ACTIC es mañana", calendar=True,
         lines=[
             ("m", "promo1_m1", "¡Socorro! ¡El ACTIC es mañana y no he estudiado nada!",
              dict(m=dict(mood="worried", sweat=1), shake=1.0)),
@@ -51,6 +51,53 @@ REELS = {
              dict(m=dict(mood="grin", arm_up=True), c=dict(mood="grin", arms="up"), card="Al día siguiente…",
                   stamp="¡APROBADO!", confetti=True)),
             ("c", "promo1_c3", "Haz el test gratis. Tienes el enlace en la bio.",
+             dict(m=dict(mood="grin"), c=dict(mood="smile", arms="wave"), end=True)),
+        ]),
+    2: dict(
+        lv="avanzado", title="Academia vs. desde casa",
+        compare=dict(left="Academia", left_items=["Horarios fijos", "Desplazarte", "Más caro"],
+                     right_items=["Cuando quieras", "Desde el móvil", "3,33 €/mes"]),
+        lines=[
+            ("m", "promo2_m1", "Me he apuntado a una academia para sacarme el ACTIC… ¡y me está costando un dineral!",
+             dict(m=dict(mood="worried", sweat=1), shake=0.8)),
+            ("c", "promo2_c1", "¿Y si lo preparas desde casa? Tests tipo examen, simulacros y temario, desde 3,33 € al "
+                               "mes.",
+             dict(m=dict(mood="wow"), c=dict(mood="smile", arms="wave"), enter=True, compare=True)),
+            ("m", "promo2_m2", "¿Y puedo estudiar cuando yo quiera?", dict(m=dict(mood="smile"), c=dict(mood="smile"))),
+            ("c", "promo2_c2", "Cuando quieras y desde el móvil. Haz el test gratis: enlace en la bio.",
+             dict(m=dict(mood="grin", phone=True, look=(1, -0.5)), c=dict(mood="smile", arms="wave"), end=True)),
+        ]),
+    3: dict(
+        lv="medio", title="POV: estudias el ACTIC en el bus",
+        lines=[
+            ("m", "promo3_m1", "Veinte minutos de bus… ¡me da para un test entero!",
+             dict(m=dict(mood="smile", phone=True, look=(1, -0.5)))),
+            (None, None, "", dict(dur=5.4, m=dict(mood="smile", phone=True, look=(1, -0.6)), rapid=[
+                ("¿Atajo para copiar?", ["Ctrl + C", "Ctrl + V"], 0),
+                ("¿Atajo para deshacer?", ["Ctrl + Y", "Ctrl + Z"], 1),
+                ("¿Qué programa es una hoja de cálculo?", ["Excel", "Word"], 0)])),
+            ("c", "promo3_c1", "¡Pleno! En actic desde casa tienes 150 preguntas para practicar donde quieras.",
+             dict(m=dict(mood="grin", arm_up=True), c=dict(mood="grin", arms="up"), enter=True,
+                  badges=["3 de 3 aciertos", "150 preguntas", "Donde quieras"])),
+            ("m", "promo3_m2", "¡Y sin cargar con apuntes!", dict(m=dict(mood="grin"), c=dict(mood="smile"))),
+            ("c", "promo1_c3", "Haz el test gratis. Tienes el enlace en la bio.",
+             dict(m=dict(mood="smile"), c=dict(mood="smile", arms="wave"), end=True)),
+        ]),
+    4: dict(
+        lv="basico", title="¿Qué nivel del ACTIC necesitas?",
+        lines=[
+            ("m", "promo4_m1", "¿Básico, medio o avanzado? ¿Cuál me toca a mí?",
+             dict(m=dict(mood="worried", look=(1, -0.3)), shake=0.4)),
+            ("c", "promo4_c1", "Básico, para demostrar que te defiendes con el ordenador.",
+             dict(m=dict(mood="smile", look=(0.5, -1)), c=dict(mood="smile", arms="point", bars=1 / 3), enter=True,
+                  level="basico", level_txt="Te defiendes con el ordenador")),
+            ("c", "promo4_c2", "Medio, el que piden en muchas oposiciones y bolsas de trabajo.",
+             dict(c=dict(mood="smile", arms="point", bars=2 / 3), level="medio",
+                  level_txt="El que piden en muchas oposiciones y bolsas de trabajo")),
+            ("c", "promo4_c3", "Y avanzado, para ir a por nota.",
+             dict(c=dict(mood="grin", arms="up", bars=1.0), level="avanzado", level_txt="Para ir a por nota")),
+            ("m", "promo4_m2", "¿Y puedo practicar los tres?", dict(m=dict(mood="wow"), c=dict(mood="smile"))),
+            ("c", "promo4_c4", "Los tres con un solo plan. Haz el test gratis: enlace en la bio.",
              dict(m=dict(mood="grin"), c=dict(mood="smile", arms="wave"), end=True)),
         ]),
     5: dict(
@@ -83,7 +130,7 @@ def build(n):
     t = 0.35
     beats = []
     for who, f, txt, st in r["lines"]:
-        clip = decode(VOZ / f"{f}.mp3")
+        clip = decode(VOZ / f"{f}.mp3") if f else np.zeros(int(st["dur"] * SR))
         if st.get("card"):
             st["card_t"] = t
             t += CARD
@@ -102,6 +149,8 @@ def build(n):
     env = {"m": np.zeros(nf), "c": np.zeros(nf)}
     hop = SR // FPS
     for b in beats:
+        if b["who"] not in env:
+            continue
         c = b["clip"]
         rms = np.array([np.sqrt(np.mean(c[i:i + hop] ** 2)) for i in range(0, len(c), hop)])
         rms = rms / (np.percentile(rms, 95) + 1e-9)
@@ -151,12 +200,16 @@ def badge_layer(s, acc):
 
 
 def title_layer(s, acc):
-    tw = int(F_TITLE.getlength(s))
+    size = 66
+    while font("ExtraBold", size).getlength(s) > W - 160 and size > 40:
+        size -= 2
+    ft = font("ExtraBold", size)
+    tw = int(ft.getlength(s))
     w, h = tw + 90, 120
     img = Image.new("RGBA", (w, h), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
     d.rounded_rectangle((0, 0, w - 1, h - 1), radius=60, fill=INK)
-    d.text((45, 18), s, font=F_TITLE, fill=WHITE)
+    d.text((45, 60 - (ft.getbbox(s)[1] + ft.getbbox(s)[3]) / 2), s, font=ft, fill=WHITE)
     return img
 
 
@@ -228,6 +281,96 @@ def end_layer(lv):
     return img
 
 
+def compare_layer(c, prog, lv):
+    """Dos columnas: la alternativa (con ✗) y acticdesdecasa (con ✓). prog 0..1 revela las filas."""
+    w, h = 980, 600
+    img = Image.new("RGBA", (w + 8, h + 12), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    d.rounded_rectangle((4, 10, w + 4, h + 10), radius=44, fill=(0, 0, 0, 40))
+    d.rounded_rectangle((0, 0, w, h), radius=44, fill=WHITE, outline=LINE, width=4)
+    d.line((w / 2, 40, w / 2, h - 40), fill=(225, 222, 215), width=4)
+    fh = font("ExtraBold", 52)
+    fi = font("Bold", 42)
+    cols = [(c["left"], c["left_items"], RED, False), ("actic" + "desdecasa", c["right_items"], GREEN, True)]
+    n = len(c["left_items"]) + len(c["right_items"])
+    for ci, (title, items, col, ok) in enumerate(cols):
+        x0 = ci * w / 2
+        d.text((x0 + (w / 2 - fh.getlength(title)) / 2, 44), title, font=fh, fill=col)
+        for j, it in enumerate(items):
+            order = j * 2 + ci
+            k = clamp(prog * n - order)
+            if k <= 0:
+                continue
+            y = 160 + j * 140
+            cx = x0 + 70
+            d.ellipse((cx - 30, y + 2, cx + 30, y + 62), fill=col)
+            if ok:
+                d.line((cx - 14, y + 34, cx - 3, y + 46, cx + 16, y + 20), fill=WHITE, width=8, joint="curve")
+            else:
+                d.line((cx - 13, y + 19, cx + 13, y + 45), fill=WHITE, width=8)
+                d.line((cx + 13, y + 19, cx - 13, y + 45), fill=WHITE, width=8)
+            from corto import wrap
+            for li, ln in enumerate(wrap(it, fi, w / 2 - 140)[:2]):
+                d.text((cx + 50, y + 6 + li * 48), ln, font=fi, fill=INK)
+    return img
+
+
+def rapid_layer(qs, j, lt, lv):
+    """Móvil con preguntas rápidas: pregunta j, lt 0..1 dentro de su tiempo (a 0.6 se marca la buena)."""
+    q, opts, ok = qs[j]
+    w, h = 760, 700
+    img = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    d.rounded_rectangle((0, 0, w - 1, h - 1), radius=70, fill=INK)
+    d.rounded_rectangle((22, 22, w - 23, h - 23), radius=52, fill=WHITE)
+    fs = font("Bold", 36)
+    lab = f"Pregunta {j + 1} de {len(qs)}"
+    d.text((60, 56), lab, font=fs, fill=(120, 126, 130))
+    d.rounded_rectangle((60, 112, w - 60, 128), radius=8, fill=(232, 229, 222))
+    d.rounded_rectangle((60, 112, 60 + (w - 120) * clamp(1 - lt), 128), radius=8, fill=lv["accent"])
+    from corto import wrap
+    fq = font("Bold", 50)
+    lines = wrap(q, fq, w - 130)
+    for li, ln in enumerate(lines):
+        d.text(((w - fq.getlength(ln)) / 2, 170 + li * 62), ln, font=fq, fill=INK)
+    y = 190 + len(lines) * 62 + 30
+    fo = font("Bold", 50)
+    for i, o in enumerate(opts):
+        good = i == ok and lt >= 0.6
+        fill, fg = (GREEN, WHITE) if good else ((243, 241, 236), INK)
+        d.rounded_rectangle((60, y, w - 60, y + 100), radius=30, fill=fill, outline=LINE, width=3)
+        d.text(((w - fo.getlength(o)) / 2, y + 22), o, font=fo, fill=fg)
+        if good:
+            d.line((w - 130, y + 52, w - 112, y + 70, w - 82, y + 32), fill=WHITE, width=9, joint="curve")
+        y += 120
+    return img
+
+
+def level_layer(key, txt, k):
+    lvl = LEVELS[key]
+    w, h = 900, 400
+    img = Image.new("RGBA", (w + 8, h + 12), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    d.rounded_rectangle((4, 10, w + 4, h + 10), radius=46, fill=(0, 0, 0, 40))
+    d.rounded_rectangle((0, 0, w, h), radius=46, fill=WHITE, outline=LINE, width=4)
+    d.rounded_rectangle((0, 0, w, 26), radius=13, fill=lvl["accent"])
+    fn = font("ExtraBold", 110)
+    d.text(((w - fn.getlength(lvl["name"])) / 2, 50), lvl["name"], font=fn, fill=lvl["accent"])
+    bw, gap = 150, 24
+    x0 = (w - 3 * bw - 2 * gap) / 2
+    for i in range(3):
+        x = x0 + i * (bw + gap)
+        d.rounded_rectangle((x, 205, x + bw, 237), radius=16, fill=(232, 229, 222))
+        kk = clamp(k * lvl["n"] - i)
+        if i < lvl["n"] and kk > 0:
+            d.rounded_rectangle((x, 205, x + max(32, bw * kk), 237), radius=16, fill=lvl["accent"])
+    from corto import wrap
+    ft = font("Bold", 44)
+    for li, ln in enumerate(wrap(txt, ft, w - 100)[:2]):
+        d.text(((w - ft.getlength(ln)) / 2, 275 + li * 54), ln, font=ft, fill=INK)
+    return img
+
+
 CONFETTI = [(random.Random(i).uniform(0, W), random.Random(i * 7).uniform(-400, 0), random.Random(i * 3).choice(
     [GREEN, RED, (46, 94, 145), (240, 190, 60)]), random.Random(i * 5).uniform(0.7, 1.3)) for i in range(70)]
 
@@ -267,7 +410,7 @@ def frame(sc, t):
             paste(f, end_layer(lv), W / 2, 580, alpha=clamp(k), scale=0.7 + 0.3 * k)
     else:
         # calendario mientras Marta se agobia
-        a = 1 - clamp((t - beats[1]["start"]) / 0.4)
+        a = (1 - clamp((t - beats[1]["start"]) / 0.4)) if r.get("calendar") else 0
         if a > 0:
             cal = Image.new("RGBA", (340, 320), (0, 0, 0, 0))
             cd = ImageDraw.Draw(cal)
@@ -300,6 +443,28 @@ def frame(sc, t):
             if bb["st"].get("end") and t >= bb["start"] - 0.1:
                 k = ease_back((t - bb["start"] + 0.1) / 0.5)
                 paste(f, end_layer(lv), W / 2, 580, alpha=clamp(k), scale=0.7 + 0.3 * k)
+
+    # comparativa, preguntas rápidas y niveles
+    end_start = next((bb["start"] for bb in beats if bb["st"].get("end")), 1e9)
+    for bi, bb in enumerate(beats):
+        s2 = bb["st"]
+        if s2.get("compare") and bb["start"] - 0.1 <= t < end_start:
+            a = clamp((t - bb["start"] + 0.1) / 0.3) * (1 - clamp((t - end_start + 0.35) / 0.3))
+            prog = clamp((t - bb["start"]) / ((bb["end"] - bb["start"]) * 0.8))
+            paste(f, compare_layer(r["compare"], prog, lv), W / 2, 590, alpha=a, scale=0.85 + 0.15 * ease_back((t - bb["start"]) / 0.4))
+        if s2.get("rapid") and bb["start"] - 0.2 <= t <= bb["end"] + 0.2:
+            qd = (bb["end"] - bb["start"]) / len(s2["rapid"])
+            j = int(clamp((t - bb["start"]) / qd, 0, len(s2["rapid"]) - 0.001))
+            lt = (t - bb["start"] - j * qd) / qd
+            a = clamp((t - bb["start"] + 0.2) / 0.2) * (1 - clamp((t - bb["end"]) / 0.2))
+            paste(f, rapid_layer(s2["rapid"], j, lt, lv), W / 2, 640, alpha=a, scale=0.9 + 0.1 * ease_back(lt / 0.15))
+        if s2.get("level"):
+            nxt = beats[bi + 1]["start"] if bi + 1 < len(beats) else bb["end"] + 1
+            if bb["start"] - 0.1 <= t < nxt:
+                a = clamp((t - bb["start"] + 0.1) / 0.2) * (1 - clamp((t - nxt + 0.25) / 0.25))
+                k = ease_back((t - bb["start"]) / 0.4)
+                paste(f, level_layer(s2["level"], s2["level_txt"], clamp((t - bb["start"]) / 0.6)), W / 2, 580,
+                      alpha=a, scale=0.7 + 0.3 * k)
 
     # --- personajes ---
     ms = state(sc, "m", t)
@@ -339,7 +504,7 @@ def frame(sc, t):
 
     # bocadillo de la línea actual
     for bb in beats:
-        if bb["start"] - 0.05 <= t <= bb["end"] + 0.3:
+        if bb["who"] and bb["start"] - 0.05 <= t <= bb["end"] + 0.3:
             k = ease_back((t - bb["start"] + 0.05) / 0.3)
             a = clamp((t - bb["start"] + 0.05) / 0.15) * (1 - clamp((t - bb["end"] - 0.1) / 0.2))
             m = bb["who"] == "m"
@@ -382,7 +547,18 @@ def audio(sc):
         s = int(b["start"] * SR)
         voice[s:s + len(b["clip"])] += b["clip"]
         st = b["st"]
-        ev.append((b["start"] - 0.05, click(), 0.5))
+        if b["who"]:
+            ev.append((b["start"] - 0.05, click(), 0.5))
+        if st.get("rapid"):
+            qd = (b["end"] - b["start"]) / len(st["rapid"])
+            for j in range(len(st["rapid"])):
+                ev += [(b["start"] + j * qd, pop(900, 400, 0.08), 0.6), (b["start"] + j * qd + qd * 0.6, chime(), 0.7)]
+        if st.get("level"):
+            ev += [(b["start"], pop(800, 300, 0.12), 0.8), (b["start"] + 0.1, whoosh(0.3), 0.4)]
+        if st.get("compare"):
+            dur = b["end"] - b["start"]
+            for j in range(6):
+                ev.append((b["start"] + dur * (0.05 + j * 0.13), pop(900, 400, 0.08), 0.45))
         if "enter_t" in st:
             ev += [(st["enter_t"] - 0.1, whoosh(), 0.6), (st["enter_t"] + 0.05, pop(520, 140, 0.15), 1.0)]
         if "buzz_t" in st:

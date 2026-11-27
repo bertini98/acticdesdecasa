@@ -17,7 +17,7 @@ Proyecto de Albert (GitHub `bertini98`): cuenta de Instagram **@acticdesdecasa**
 
 - `actic/personajes.py`: Casi (mascota casita con las barras de nivel) y Marta (estudiante), dibujados con PIL y animables (boca, parpadeo, expresiones, poses). `actic/promo.py`: guiones en `REELS` (líneas con quién habla, audio, texto del bocadillo y estado de los personajes/efectos); la boca sigue el volumen de cada voz. Uso: `python3 promo.py 1 5` (o `--preview` para fotogramas) → `salida/promo/promo_{n}.mp4`.
 - Voz de Marta: **Gala** (`Wi5NZQRxyOb3Jx4r0hrI`, castellano joven); Casi: Pablo. Audios `salida/quiz_voz/promo{n}_{m|c}{k}.mp3`.
-- Hechos: 1 «POV: el ACTIC es mañana» y 5 «El error que suspende a todos». Ideas pendientes: 2 academia vs desde casa, 3 POV estudias en el bus, 4 qué nivel necesitas.
+- Hechos (5): 1 «POV: el ACTIC es mañana», 2 «Academia vs. desde casa» (prop `compare`), 3 «POV: estudias el ACTIC en el bus» (línea muda con `rapid`: preguntas en el móvil), 4 «¿Qué nivel del ACTIC necesitas?» (prop `level`, barras de Casi con `bars`), 5 «El error que suspende a todos» (`question`). Todos acaban con la tarjeta «Haz el test gratis · enlace en la bio» (`end` / `end_at`).
 
 ## Voz (ElevenLabs)
 
